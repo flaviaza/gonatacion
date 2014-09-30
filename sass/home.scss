@@ -1,0 +1,258 @@
+@import 'compass/css3/filter';
+@import 'compass/css3/opacity';
+@import 'compass/css3/text-shadow';
+@import 'compass/css3/opacity';
+@import 'compass/css3/border-radius';
+@import 'variables';
+
+.jumbotron{
+  position: relative;
+  margin: 0;
+  padding: 36% 0 0 0;
+  background: transparent none;
+  .container{
+    margin: 0 auto;
+  }
+  .submenu{
+    height: 150px;
+    color: $main;
+    position: relative;
+    ul#purchase_flow{
+      padding: 0;
+      counter-reset: step;
+      li{
+        display: inline-block;
+        position: relative;
+        width: 16.3%;
+        height: 150px;
+        padding: 5px 25px 0;
+        list-style: none;
+        text-align: center;
+        vertical-align: top;
+        [class*='icon']{
+          display: block;
+          color: darken($main, 15%);
+          font-size: 64px;
+          @include text-shadow(0 3px 5px darken($main, 38%));
+          margin: 15px 0 10px 0;
+        }
+        .step-title{
+          color: $blured-menu-text;
+          text-transform: uppercase;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &:before {
+          display: block;
+          counter-increment: step;
+          content: counter(step);
+          font-size: 24px;
+          float: left;
+        }
+        &:after{
+          display: block;
+          position: absolute;
+          content: '\00a0';
+          background: transparent url('../images/purchase-flow-arrow.png') center center no-repeat;
+          width: 32px;
+          height: 150px;
+          top: 0;
+          right: -16px;
+        }
+        &:last-child:after{
+          display: none;
+        }
+      }
+    }
+  }
+  .blured{
+    &:after{
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      z-index: -2;
+      content: '\00a0';
+      background-image: url('../images/meolans.jpg');
+      background-position: center -48%;
+      background-size: 100% auto;
+      @include filter(blur(5px) grayscale(100%));
+    }
+    &:before{
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      z-index: -1;
+      content: '\00a0';
+      background-color: #002E4E;
+      @include opacity(.7);
+    }
+  }
+  .main-menu{
+    background: $navigation-bg none;
+    .nav{
+      float: none;
+      &> li{
+        padding: 5px 0;
+        &> a{
+          padding: 35px 54px;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+        &> a:hover,
+        &> a:focus{
+          background-color: $main;
+          color: $text-main;
+          border-top-color: $active;
+        }
+    }
+    }
+  }
+}
+.home {
+  .main-content {
+    header {
+      background: $bg-heading;
+      .container {
+        margin: 0 auto;
+        padding: 0 15px;
+        line-height: 60px;
+        color: $main;
+        text-transform: uppercase;
+        @include text-shadow(0 3px 5px $text-contrast);
+        font-size: 22px;
+      }
+    }
+  }
+}
+.home #grid{
+  max-width: 1770px;
+  margin: 0 auto;
+  .picture-item{
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+    height: 241px;
+    @media (max-width: 767px) {
+      height: auto;
+    }
+    @media (max-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+      height: 314px;
+    }
+    @media (min-width: 1200px) {
+      height: 381px;
+    }
+    .picture-item__details {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: $highlight;
+      .picture-item__title a {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        span {
+          display: block;
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          color: $text-contrast;
+          font-size: 17px;
+          font-weight: 300;
+          max-width: 85%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .icon-plus-sign {
+          display: block;
+          position: absolute;
+          font-size: 76px;
+          line-height: 76px;
+          width: 76px;
+          height: 76px;
+          left: 50%;
+          top: 50%;
+          margin: -38px 0 0 -38px;
+          @include text-shadow(0 3px 5px darken($main, 38%));
+          color: $main;
+        }
+      }
+    }
+    &:hover {
+      .picture-item__details {
+        display: block;
+      }
+    }
+  }
+  .picture-item.picture-item--h2 {
+
+    height: 482px;
+    /* 2x the height + 1 gutter */
+    @media (max-width: 767px) {
+      height: auto;
+    }
+    @media (max-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+      height: 628px;
+    }
+    @media (min-width: 1200px) {
+      height: 764px;
+    }
+
+  }
+}
+.search {
+  padding-right: 0;
+  display: inline-block;
+  input, button {
+    display: block;
+    float: left;
+    margin: 0;
+    border: 0px solid transparent;
+  }
+  input{
+    width: 80%;
+    color: darken($blured-menu-text, 40%);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  button {
+    width: 20%;
+    height: 62px;
+    @include border-radius(0);
+    font-size: 22px;
+    color: $text-contrast;
+    background: $success;
+    position: relative;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '\00a0';
+      width: 0;
+      height: 0;
+      border: 8px solid $success;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      left: -16px;
+      top: 24px;
+    }
+  }
+}
