@@ -36,10 +36,10 @@
 	content: "\e604";
 }
 .icon-creditcard:before {
-	content: "\e605";
+	content: "\e606";
 }
 .icon-deliverycar:before {
-	content: "\e606";
+	content: "\e607";
 }
 .icon-discountlabel:before {
 	content: "\e607";
@@ -63,10 +63,10 @@
 	content: "\e60d";
 }
 .icon-addtobasket:before {
-	content: "\e600";
+	content: "\e601";
 }
 .icon-plus-sign:before {
-	content: "\e61b";
+	content: "\e61c";
 }
 .icon-euronotes:before {
 	content: "\e60e";
@@ -78,33 +78,35 @@
 	content: "\e610";
 }
 .icon-magnifier:before {
-	content: "\e611";
+	content: "\e612";
 }
 .icon-newbadge:before {
-	content: "\e612";
+	content: "\e613";
 }
 .icon-open:before {
 	content: "\e613";
 }
 .icon-parcel:before {
-	content: "\e614";
-}
-.icon-piggybank:before {
 	content: "\e615";
 }
-.icon-removefrombasket:before {
+.icon-piggybank:before {
 	content: "\e616";
 }
-.icon-salebadge:before {
+.icon-removefrombasket:before {
 	content: "\e617";
 }
-.icon-saletag:before {
+.icon-salebadge:before {
 	content: "\e618";
+}
+.icon-saletag:before {
+	content: "\e619";
 }
 .icon-ShoppingBag:before {
 	content: "\e619";
 }
 .icon-shoppingbasket:before {
-	content: "\e61a";
+	content: "\e61b";
 }
-
+.icon-user:before{
+	content: "\e600";
+}
