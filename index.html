@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="stylesheets/shuffle-styles.css" rel="stylesheet" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheets/mapfre-icon-font.css" title="icon font" type="text/css" />
 <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
@@ -19,25 +19,53 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/mapfred.png" alt="mapfred" /><span class="btn btn-primary">Tienda Online</span></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/mapfred.png" alt="mapfred" />
+        <span>Tienda Online</span>
+      </a>
     </div>
   </div>
-  <div class="collapse navbar-collapse">
+  <div class="navbar-collapse">
     <ul class="nav navbar-nav home-nav">
-      <li class="active"><a href="#about">¿Quiénes somos?</a></li>
-      <li><a href="#contact">Contacto</a></li>
-      <li><a href="#login">Ingresar</a></li>
+      <li class="active"><a href="#about" data-toggle="tab">¿Quiénes somos?</a></li>
+      <li><a href="#contact" class="contact" data-toggle="tab">Contacto</a></li>
+      <li><a href="#login" class="login" data-toggle="tab">Ingresar</a></li>
       <li><a href="#register">Registrarse</a></li>
     </ul>
   </div><!--/.nav-collapse -->
 </div>
 <div class="jumbotron">
+
+  <div class="login-box hide">
+    <form id="login-form" action="index.html" method="post" role="form">
+      <input type="text" placeholder="Usuario" class="large-input user-data">
+      <input type="password" placeholder="Contraseña" class="large-input password-data">
+      <div class="help-login">
+        <p>¿Olvidó su contraseña? <a href="#forgot-password">Click aquí</a></p>
+        <p>¿Todavía no se registró? <a href="#new-register">Click aquí</a></p>
+      </div>
+      <input type="submit" value="ENVIAR" class="btn btn-success">
+      <button type="button" class="btn btn-lg btn-facebook">
+        <img src="images/facebook-logo.png" class="pull-left"/>
+        <span>Entrar con <b>Facebook</b><span>
+      </button>
+    </form>
+  </div><!--/.login-box -->
+
+  <div class="contact-box hide">
+    <form id="contact-form" action="index.html" method="post" role="form">
+      <input type="text" placeholder="Nombre" class="large-input user-data">
+      <input type="text" placeholder="E-mail" class="large-input password-data">
+      <textarea name="Name" rows="8" cols="40" placeholder="Su consulta" class="large-input message"></textarea>
+      <div class="help-login">
+        <p>Paso de los Andes 384 Ciudad Mendoza CP(5500) Argentina</p>
+        <p>+54 (0261) 4297251 / 4253127 (línea directa)</p>
+        <p>info@gonatacion.com.ar</p>
+      </div>
+      <input type="submit" value="ENVIAR" class="btn btn-success">
+    </form>
+  </div><!--/.contact-box -->
+
   <div class="submenu blured">
 
     <ul class="container" id="purchase_flow">
@@ -67,6 +95,7 @@
       </li>
     </ul>
   </div>
+
   <div class="main-menu">
     <ul class="container nav navbar-nav">
       <li><a href="#">Productos</a></li>
@@ -77,6 +106,7 @@
     </ul>
   </div>
 </div>
+
 <div class="main-content">
   <header class="clearfix">
     <h2 class="container"><i class="icon-newbadge"></i> Productos destacados<span class="search clearfix col-md-4 col-sm-4 pull-right">
@@ -87,12 +117,11 @@
   </header>
   <div class="container">
 
-
     <div id="grid" class="row">
       <figure class="col-md-4 col-sm-4 picture-item" data-groups='["photography"]'>
         <img src="images/roller.jpg"/>
         <div class="picture-item__details clearfix">
-          <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
+          <figcaption class="picture-item__title pull-left"><a href="product.html" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
       <figure class="col-md-8 col-sm-8 picture-item" data-groups='["wallpaper","3d"]'>
@@ -126,71 +155,76 @@
         </div>
       </figure>
     </div>
-
-
-
-
-
-
   </div>
+
 </div>
+
+
 <footer id="footer">
   <div class="container">
-    <a class="btn collapsed" data-toggle="collapse" data-parent="#footer" href="#footerContent" >Ver más</a>
-    <div class="row collapse" id="footerContent">
-      <div class="col-md-8">
-        <h3>Productos</h3>
+    <div id="footerContent">
+      <div class="col-md-6">
+        <h3>PRODUCTOS</h3>
         <div class="row">
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-list">
             <li><h4>Natación</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Antiparras</a></li>
+            <li><a href="#">Gorras</a></li>
+            <li><a href="#">Set Máscara Snorkel</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Aquashoes</a></li>
+            <li><a href="#">Mallas</a></li>
           </ul>
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-list">
             <li><h4>Pelotas</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Fútbol Nº 5</a></li>
+            <li><a href="#">Voleyball</a></li>
+            <li><a href="#">Handball</a></li>
+            <li><a href="#">Basket</a></li>
+            <li><a href="#">Futsal</a></li>
+            <li><a href="#">Inflador</a></li>
           </ul>
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-list">
             <li><h4>Otros</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Skate</a></li>
+            <li><a href="#">Palos de Hockey</a></li>
+            <li><a href="#">Bolsos (DryBags)</a></li>
+            <li><a href="#">Bochas</a></li>
           </ul>
         </div>
       </div>
-      <div class="col-md-2">
-        <h3>Nuestras Marcas</h3>
+      <div class="col-md-3">
+        <h3>NUESTRAS MARCAS</h3>
         <div class="row">
-          <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+          <ul class="col-md-12 products-list">
+            <li><a href="#">Marfed</a></li>
+            <li><a href="#">Ben 10</a></li>
+            <li><a href="#">Ben 10 Alien Force</a></li>
+            <li><a href="#">Princesa</a></li>
+            <li><a href="#">Wave</a></li>
+            <li><a href="#">Stop</a></li>
           </ul>
         </div>
+      </div>
+      <div class="col-md-3 logo">
+        <img src="images/logo-footer.png" alt="Mapfred" class="pull-right"/>
       </div>
     </div>
   </footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="javascripts/bootstrap.js"></script>
-<script src="javascripts/jquery.shuffle.modernizr.js"></script>
-<script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
-<script src="javascripts/marfed.js"></script>
-</body>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="javascripts/bootstrap.js"></script>
+  <script src="javascripts/jquery.shuffle.modernizr.js"></script>
+  <script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
+  <script src="javascripts/marfed.js" type="text/javascript"></script>
+
+  </body>
+</html>
+shuffle.modernizr.js"></script>
+  <script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
+  <script src="javascripts/marfed.js" type="text/javascript"></script>
+
+  </body>
 </html>

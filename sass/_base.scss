@@ -1,0 +1,250 @@
+@import 'variables';
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/text-shadow';
+
+* {
+  @include box-sizing(border-box);
+}
+
+a{
+  color:$link-color;
+  font-weight:300;
+  &:hover{
+    color:$bg;
+    text-decoration:none;
+  }
+}
+
+.btn{
+  &:focus, &:active{
+    outline: none;
+    outline-offset: 0;
+  }
+  &:active{
+    box-shadow:none;
+    -webkit-box-shadow:none;
+  }
+}
+
+.highlight-blue{
+  color:$main;
+}
+
+input:focus{
+  outline: none;
+  outline-offset: 0;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $placeholder;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $placeholder;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $placeholder;
+}
+
+
+.btn-success{
+  background-color: $btn-success-color;
+  border-color: $btn-success-color;
+  border-radius:0;
+}
+
+body{
+  font-family: 'Lato', Arial, sans-serif;
+  background: $bg;
+  &.home{
+    width: 100%;
+    background: $bg url('../images/meolans.jpg') center top no-repeat;
+    background-size: 100% auto;
+    position:relative;
+  }
+  &.products{
+
+  }
+}
+.navbar-fixed-top {
+  position: absolute;
+}
+.navbar-brand{
+  width: 215px;
+  img{
+    display: block;
+    width: 200px;
+  }
+  span {
+    text-align: center;
+    color: $text-contrast;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: block;
+    @include text-shadow(0 1px 4px lighten($main,10%));
+  }
+}
+.navbar-inverse {
+  .container{
+    height: 0;
+  }
+  background: transparent none;
+  border-color: transparent;
+  .navbar-collapse{
+    border-color: transparent;
+  }
+  .navbar-nav{
+    float: right;
+    margin-right: 40px;
+    &> li > a{
+      border-top: 1px solid transparent;
+      font-size: 18px;
+      padding: 24px 30px;
+      color: $text-contrast;
+    }
+    &> .active > a,
+    &> .active > a:hover,
+    &> .active > a:focus{
+      background-color: $main;
+      color: $text-main;
+      border-top-color: $active;
+    }
+  }
+}
+ul{
+  &> .active > a,
+  &> .active > a:hover,
+  &> .active > a:focus{
+    background-color: $main;
+    color: $text-main;
+    border-top-color: $active;
+    @include text-shadow(0 1px 4px lighten($main,10%));
+  }
+}
+
+.inner-page-nav{
+  background-color:black;
+  border-bottom:2px solid $main;
+  margin-bottom:0;
+  padding:10px 0;
+  .navbar-nav > li > a{
+    margin: 0 4px;
+    padding:8px;
+    &:hover{
+      background-color:transparent;
+      text-decoration:underline;
+    }
+    &.btn-ingresar{
+      background-color: $main;
+      color: $text-main;
+      @include border-radius(4px);
+      @include text-shadow(0 1px 4px lighten($main,10%));
+      i{
+        font-size:12px;
+        margin-left:4px;
+      }
+      &:hover{
+        text-decoration:none;
+      }
+    }
+  }
+  .navbar-brand{
+    height:auto;
+    padding:0;
+  }
+}
+
+.search-nav{
+  background-color: $light-grey;
+  border:0;
+  @include border-radius(0);
+  margin-bottom:0;
+  .navbar-form{
+    input{
+      @include border-radius(4px 0 0 4px);
+      border:0;
+      box-shadow:none;
+    }
+    .btn{
+      @include border-radius(0 4px 4px 0);
+      border:1px solid $success;
+      background-color: $success;
+      color:$bg;
+      @include text-shadow(rgba(black, 0.2) 1px 2px 4px);
+      font-size:20px;
+      padding:2px 6px;
+    }
+  }
+  .product-title{
+    line-height:48px;
+    margin:0;
+  }
+}
+
+.user-menu{
+  display: block;
+  margin: 0;
+  padding: 0;
+  li{
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+.main-content{
+  background: $bg none;
+  padding-top: 1px;
+}
+
+.jumbotron{
+  position:relative;
+}
+
+.large-input{
+  width:100%;
+}
+
+footer{
+  width: 100%;
+  background: transparentize($navigation-bg, .1);
+  height:60px;
+  bottom:0;
+  overflow:hidden;
+  position:fixed;
+  transition: all 0.5s ease;
+  &:hover{
+    height:280px;
+    bottom:0;
+    overflow:visible;
+    transition: all 0.5s ease;
+  }
+  h3{
+    color: $highlight;
+  }
+  ul.products-list{
+    list-style:none;
+    padding-left: 25px;
+    li{
+      padding:4px 0 6px;
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, .20) inset, 0 1px 0 rgba(255, 255, 255, .05);
+      &:last-child{
+        box-shadow: none;
+      }
+      h4{
+        color:$blue;
+        margin:0;
+        font-weight: 300;
+      }
+      a{
+        font-weight:100;
+        text-shadow: 2px 2px black;
+      }
+    }
+  }
+  .logo {
+    margin-top: 5px;
+  }
+}

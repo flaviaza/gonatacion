@@ -1,0 +1,56 @@
+@import 'variables';
+
+
+// Product page styles
+// ======================================================================
+
+.product-container{
+	position:relative;
+	.product-pic{
+		height:450px;
+		overflow:hidden;
+	}
+	.product-info{
+		height:450px;
+		position:relative;
+	}
+	.icon-user{
+		float:left;
+		width:10%;
+	}
+	.pricing-options{
+		float:left;
+		border-left: 1px solid red;
+		padding-left: 10px;
+		width:90%
+	}
+	.description{
+		background-color:white;
+		color:$text-description;
+		margin:20px auto;
+		padding: 5px 15px;
+		width:90%;
+		p{
+			font-size:12px;
+			font-weight:300;
+			line-height:18px;
+		}
+	}
+	.buying-options{
+		background-color:$bg-heading;
+		bottom:0;
+		padding:5px;
+		position:absolute;
+		width:100%;
+	}
+}
+
+.product-price{
+	background-color:$main;
+	color:white;
+	padding:10px 15px;
+	.price{
+		font-weight:100;
+		margin:0;
+	}
+}

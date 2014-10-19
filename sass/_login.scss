@@ -1,0 +1,78 @@
+@import 'variables';
+
+
+// Login styles
+// ======================================================================
+
+.login-box, .contact-box{
+	position:absolute;
+	top:140px;
+	right:265px;
+	width:480px;
+	.btn-success{
+		background: $success url('../images/triangle.png') center top no-repeat;
+		border:0;
+		font-weight:300;
+		float:right;
+		height:80px;
+		width:25%;
+	}
+	.help-login {
+		background-color:$grey;
+		display:inline-block;
+		font-size:12px;
+		vertical-align:top;
+		height:80px;
+		width:75%;
+		padding: 10px 15px;
+		p {
+			font-size:12px;
+			margin-bottom: 3px;
+			a {
+				color: $main;
+			}
+		}
+	}
+	input[type="text"], input[type="password"]{
+		border:0;
+		font-size:18px;
+		height:65px;
+		padding:16px;
+		// -webkit-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.39);
+		// -moz-box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.39);
+		// box-shadow: inset 0px 0px 28px -5px rgba(0,0,0,0.39);
+	}
+	textarea {
+		padding: 10px 16px;
+		margin-top: 25px;
+		border: none;
+		outline: none;
+	}
+	.user-data {
+		margin-bottom:25px;
+	}
+}
+
+.login-box {
+	.help-login {
+		padding-top: 20px;
+	}
+}
+
+.btn-facebook{
+	background: url('../images/btn-facebook.png') center left repeat-x;
+	color: $bg;
+	font-size:16px;
+	font-weight:100;
+	@include border-radius(0);
+	line-height:44px;
+	margin-top:25px;
+	padding:5px;
+	width:100%;
+	&:hover{
+		color:$bg;
+	}
+	&:active{
+		background: url('../images/btn-facebook.png') center left repeat-x;
+	}
+}
