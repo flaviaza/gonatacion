@@ -24,3 +24,16 @@ $(document).on('click', 'a[data-toggle=tab]', function () {
     $('.contact-box')[action]('hide');
 
 });
+
+// Home - Main menú animation
+// ======================================================================
+
+$(document).ready(function() {
+  $(".main-menu a").hover(function(){
+    idItem = $(this).attr('id');
+    $("#" + idItem + "-menu").removeClass("hidden");
+  }, function() {
+    $("#" + idItem + "-menu").addClass("hidden");
+  });
+});
+

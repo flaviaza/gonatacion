@@ -20,7 +20,7 @@
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">
-        <img src="images/mapfred.png" alt="mapfred" />
+        <img src="images/mapfred.png" alt="mapfred" class="home" />
         <span>Tienda Online</span>
       </a>
     </div>
@@ -66,8 +66,104 @@
     </form>
   </div><!--/.contact-box -->
 
-  <div class="submenu blured">
+  <div class="main-menu">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <li><a href="#" id="productos">Productos</a></li>
+        <li><a href="#" id="marcas">Nuestras Marcas</a></li>
+        <li><a href="#" id="ofertas">Ofertas</a></li>
+        <li><a href="#" id="como-comprar">¿Cómo comprar?</a></li>
+        <li><a href="#" id="soporte">Soporte</a></li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="submenu large blured" id="productos-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="row">
+            <ul class="col-md-4 products-list">
+              <li><h4>Natación</h4></li>
+              <li><a href="#">Antiparras</a></li>
+              <li><a href="#">Gorras</a></li>
+              <li><a href="#">Set Máscara Snorkel</a></li>
+              <li><a href="#">Accesorios</a></li>
+              <li><a href="#">Aquashoes</a></li>
+              <li><a href="#">Mallas</a></li>
+            </ul>
+            <ul class="col-md-4 products-list">
+              <li><h4>Pelotas</h4></li>
+              <li><a href="#">Fútbol Nº 5</a></li>
+              <li><a href="#">Voleyball</a></li>
+              <li><a href="#">Handball</a></li>
+              <li><a href="#">Basket</a></li>
+              <li><a href="#">Futsal</a></li>
+              <li><a href="#">Inflador</a></li>
+            </ul>
+            <ul class="col-md-4 products-list">
+              <li><h4>Otros</h4></li>
+              <li><a href="#">Skate</a></li>
+              <li><a href="#">Palos de Hockey</a></li>
+              <li><a href="#">Bolsos (DryBags)</a></li>
+              <li><a href="#">Bochas</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="submenu hidden blured" id="marcas-menu">
+    <ul class="container brands">
+      <li>
+        <span class="brand-marfed"></span>        
+      </li>
+      <li>
+        <span class="brand-ben-10-alien"></span>        
+      </li>
+      <li>
+        <span class="brand-ben-10"></span>        
+      </li>
+      <li>
+        <span class="brand-disney"></span>        
+      </li>
+      <li>
+        <span class="brand-hulk"></span>        
+      </li>
+    </ul>
+  </div>
+  
+  <!-- <div class="submenu hidden blured" id="ofertas-menu">
+    <ul class="container">
+      <li>
+        
+      <span class="step-title">JAJAJA</span>
+      </li>
+      <li>
+      <i class="icon-addtobasket"></i>
+      <span class="step-title">Uno o más productos</span>
+      </li>
+      <li>
+      <i class="icon-creditcard"></i>
+      <span class="step-title">Pagá</span>
+      </li>
+      <li>
+      <i class="icon-parcel"></i>
+      <span class="step-title">Coordiná la entrega</span>
+      </li>
+      <li>
+      <i class="icon-deliverycar"></i>
+      <span class="step-title">Lo enviamos a tu casa</span>
+      </li>
+      <li>
+      <i class="icon-piggybank"></i>
+      <span class="step-title">Listo</span>
+      </li>
+    </ul>
+  </div> -->
+  
+  <div class="submenu hidden blured" id="como-comprar-menu">
     <ul class="container" id="purchase_flow">
       <li>
       <i class="icon-saletag"></i>
@@ -96,15 +192,35 @@
     </ul>
   </div>
 
-  <div class="main-menu">
-    <ul class="container nav navbar-nav">
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Nuestras Marcas</a></li>
-      <li><a href="#">Ofertas</a></li>
-      <li class="active"><a href="#">¿Cómo comprar?</a></li>
-      <li><a href="#">Soporte</a></li>
+  <!-- <div class="submenu hidden blured" id="soporte-menu">
+    <ul class="container">
+      <li>
+      <i class="icon-saletag"></i>
+      <span class="step-title">JDSJGFHJADHGHDFHGDFJAG</span>
+      </li>
+      <li>
+      <i class="icon-addtobasket"></i>
+      <span class="step-title">Uno o más productos</span>
+      </li>
+      <li>
+      <i class="icon-creditcard"></i>
+      <span class="step-title">Pagá</span>
+      </li>
+      <li>
+      <i class="icon-parcel"></i>
+      <span class="step-title">Coordiná la entrega</span>
+      </li>
+      <li>
+      <i class="icon-deliverycar"></i>
+      <span class="step-title">Lo enviamos a tu casa</span>
+      </li>
+      <li>
+      <i class="icon-piggybank"></i>
+      <span class="step-title">Listo</span>
+      </li>
     </ul>
-  </div>
+  </div> -->
+  
 </div>
 
 <div class="main-content">
@@ -115,7 +231,7 @@
     </span></h2>
 
   </header>
-  <div class="container">
+  <div class="container"> 
 
     <div id="grid" class="row">
       <figure class="col-md-4 col-sm-4 picture-item" data-groups='["photography"]'>
@@ -210,19 +326,13 @@
         <img src="images/logo-footer.png" alt="Mapfred" class="pull-right"/>
       </div>
     </div>
-  </footer>
+</footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="javascripts/bootstrap.js"></script>
   <script src="javascripts/jquery.shuffle.modernizr.js"></script>
-  <script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
-  <script src="javascripts/marfed.js" type="text/javascript"></script>
-
-  </body>
-</html>
-shuffle.modernizr.js"></script>
   <script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
   <script src="javascripts/marfed.js" type="text/javascript"></script>
 

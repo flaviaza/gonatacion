@@ -4,52 +4,100 @@
 // Product page styles
 // ======================================================================
 
-.product-container{
+.product-container {
 	position:relative;
 	.product-pic{
 		height:450px;
 		overflow:hidden;
 	}
-	.product-info{
+	.product-info {
 		height:450px;
 		position:relative;
+		padding-left: 0;
 	}
-	.icon-user{
-		float:left;
+	.icon-user {
 		width:10%;
 	}
-	.pricing-options{
-		float:left;
-		border-left: 1px solid red;
-		padding-left: 10px;
-		width:90%
+	.product-options {
+		height: 75%;
+		padding: 20px 0 0 20px;
 	}
-	.description{
+	.pricing-options {
+		.icon-option {
+			width: 40px;
+		}
+
+		.icon-option, .details-option {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.icon-creditcard, .icon-deliverycar {
+			font-size: 28px;
+		}
+	}
+	.description {
 		background-color:white;
 		color:$text-description;
-		margin:20px auto;
-		padding: 5px 15px;
-		width:90%;
-		p{
-			font-size:12px;
+		margin: 26px 0 10px;
+		padding: 5px 18px;
+		width: 95%;
+		p {
+			font-size:13px;
 			font-weight:300;
 			line-height:18px;
 		}
 	}
-	.buying-options{
-		background-color:$bg-heading;
-		bottom:0;
-		padding:5px;
-		position:absolute;
-		width:100%;
+	.buying-options {
+		height: 13%;
+		background-color: $bg-heading;
+		padding: 8px 10px;
+		text-align: right;
+		.btn {
+			padding: 6px 15px;
+			font-size: 20px;
+			border-radius: 3px;
+			@include text-shadow(0 1px 4px lighten($main,10%));
+			vertical-align: middle;
+			margin-left: 5px;
+			font-weight: 300;
+		}
+		a {
+			vertical-align: middle;
+			padding: 19px 7px 0;
+			span {
+				font-size: 32px;
+				color: #9c9c9c;
+				text-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+			}
+		}
 	}
 }
 
-.product-price{
+.details-option {
+	border-left: 1px solid #e6e6e6;
+	box-shadow: -1px 0 0 white;
+	padding-left: 10px;
+	min-height: 80px;
+	p {
+		margin: 0;
+		font-size: 16px;
+		a {
+			font-size: 14px;
+		}
+	}
+}
+.envios {
+	.details-option {
+		min-height: 40px;
+	}
+}
+
+.product-price {
 	background-color:$main;
 	color:white;
 	padding:10px 15px;
-	.price{
+	height: 12%;
+	.price {
 		font-weight:100;
 		margin:0;
 	}
