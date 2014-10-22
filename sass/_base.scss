@@ -90,7 +90,7 @@ body{
   position: absolute;
 }
 .navbar-brand{
-  width: 215px;
+  width: 261px;
   img {
     display: block;
     .home {
@@ -101,9 +101,10 @@ body{
     text-align: center;
     color: $text-contrast;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 18px;
     display: block;
-    @include text-shadow(0 1px 4px lighten($main,10%));
+    padding-top: 10px;
+    @include text-shadow(0 1px 2px $navigation-bg);
   }
 }
 .navbar-inverse {
@@ -114,23 +115,28 @@ body{
   border-color: transparent;
   .navbar-collapse{
     border-color: transparent;
+    .container {
+      position: relative;
+    }
   }
   .navbar-nav{
     float: right;
     margin-right: 40px;
     &> li > a{
-      border-top: 1px solid transparent;
-      font-size: 19px;
+      font-size: 14px;
       padding: 24px 30px;
       color: $text-contrast;
-      @include text-shadow(0 1px 4px lighten($main,10%));
+      text-transform: uppercase;
+      @include text-shadow(0 1px 4px $navigation-bg);
     }
+    &> li > a:hover,
     &> .active > a,
     &> .active > a:hover,
     &> .active > a:focus{
       background-color: $main;
       color: $text-main;
       border-top-color: $active;
+      text-shadow: none;
     }
   }
 }

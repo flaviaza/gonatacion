@@ -27,58 +27,77 @@
   </div>
   <div class="navbar-collapse">
     <ul class="nav navbar-nav home-nav">
-      <li class="active"><a href="#about" data-toggle="tab">¿Quiénes somos?</a></li>
+      <li><a href="#about" data-toggle="tab">¿Quiénes somos?</a></li>
       <li><a href="#contact" class="contact" data-toggle="tab">Contacto</a></li>
       <li><a href="#login" class="login" data-toggle="tab">Ingresar</a></li>
-      <li><a href="#register">Registrarse</a></li>
+      <li><a href="#register" class="register" data-toggle="tab">Registrarse</a></li>
     </ul>
+    <div class="container">
+      <div class="login-box hide">
+        <form id="login-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Usuario" class="large-input user-data">
+          <input type="password" placeholder="Contraseña" class="large-input password-data">
+          <div class="help-form">
+            <p>¿Olvidó su contraseña? <a href="#forgot-password">Click aquí</a></p>
+            <p>¿Todavía no se registró? <a href="#new-register">Click aquí</a></p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn btn-success">
+          <button type="button" class="btn btn-lg btn-facebook">
+            <img src="images/facebook-logo.png" class="pull-left"/>
+            <span>Entrar con <b>Facebook</b><span>
+          </button>
+        </form>
+      </div><!--/.login-box -->
+
+      <div class="contact-box hide">
+        <form id="contact-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Nombre" class="large-input user-data">
+          <input type="text" placeholder="E-mail" class="large-input password-data">
+          <textarea name="Name" rows="8" cols="40" placeholder="Su consulta" class="large-input message"></textarea>
+          <div class="help-form">
+            <p>Paso de los Andes 384 Ciudad Mendoza CP(5500) Argentina</p>
+            <p>+54 (0261) 4297251 / 4253127 (línea directa)</p>
+            <p>info@gonatacion.com.ar</p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn btn-success">
+        </form>
+      </div><!--/.contact-box -->
+
+      <div class="register-box hide">
+        <form id="register-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Correo" class="large-input user-data">
+          <input type="password" placeholder="Contraseña" class="large-input password-data">
+          <input type="password" placeholder="Repita contraseña" class="large-input password-data">
+          <div class="help-form">
+            <p><input type="checkbox" id="remember-me"><label for="remember-me">Recordarme</label></p>
+            <p>Se ha enviado un email.<a href="#forgot-password">Click aquí</a></p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn btn-success">
+          <button type="button" class="btn btn-lg btn-facebook">
+            <img src="images/facebook-logo.png" class="pull-left"/>
+            <span>Entrar con <b>Facebook</b><span>
+          </button>
+        </form>
+      </div><!--/.register-box -->
+    </div>
   </div><!--/.nav-collapse -->
 </div>
 <div class="jumbotron">
 
-  <div class="login-box hide">
-    <form id="login-form" action="index.html" method="post" role="form">
-      <input type="text" placeholder="Usuario" class="large-input user-data">
-      <input type="password" placeholder="Contraseña" class="large-input password-data">
-      <div class="help-login">
-        <p>¿Olvidó su contraseña? <a href="#forgot-password">Click aquí</a></p>
-        <p>¿Todavía no se registró? <a href="#new-register">Click aquí</a></p>
-      </div>
-      <input type="submit" value="ENVIAR" class="btn btn-success">
-      <button type="button" class="btn btn-lg btn-facebook">
-        <img src="images/facebook-logo.png" class="pull-left"/>
-        <span>Entrar con <b>Facebook</b><span>
-      </button>
-    </form>
-  </div><!--/.login-box -->
+</div>
 
-  <div class="contact-box hide">
-    <form id="contact-form" action="index.html" method="post" role="form">
-      <input type="text" placeholder="Nombre" class="large-input user-data">
-      <input type="text" placeholder="E-mail" class="large-input password-data">
-      <textarea name="Name" rows="8" cols="40" placeholder="Su consulta" class="large-input message"></textarea>
-      <div class="help-login">
-        <p>Paso de los Andes 384 Ciudad Mendoza CP(5500) Argentina</p>
-        <p>+54 (0261) 4297251 / 4253127 (línea directa)</p>
-        <p>info@gonatacion.com.ar</p>
-      </div>
-      <input type="submit" value="ENVIAR" class="btn btn-success">
-    </form>
-  </div><!--/.contact-box -->
-
-  <div class="main-menu">
-    <div class="container">
-      <ul class="nav navbar-nav">
-        <li><a href="#" id="productos">Productos</a></li>
-        <li><a href="#" id="marcas">Nuestras Marcas</a></li>
-        <li><a href="#" id="ofertas">Ofertas</a></li>
-        <li><a href="#" id="como-comprar">¿Cómo comprar?</a></li>
-        <li><a href="#" id="soporte">Soporte</a></li>
-      </ul>
-    </div>
+<div class="main-menu">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li><a href="#" id="productos">Productos</a></li>
+      <li><a href="#" id="marcas">Nuestras Marcas</a></li>
+      <li><a href="#" id="ofertas">Ofertas</a></li>
+      <li><a href="#" id="como-comprar">¿Cómo comprar?</a></li>
+      <li><a href="#" id="soporte">Soporte</a></li>
+    </ul>
   </div>
-
-  <div class="submenu large blured" id="productos-menu">
+  
+  <div class="submenu hidden large blured" id="productos-menu">
     <div class="container">
       <div class="row">
         <div class="col-md-7">
@@ -113,7 +132,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="submenu hidden blured" id="marcas-menu">
     <ul class="container brands">
       <li>
@@ -133,36 +152,7 @@
       </li>
     </ul>
   </div>
-  
-  <!-- <div class="submenu hidden blured" id="ofertas-menu">
-    <ul class="container">
-      <li>
-        
-      <span class="step-title">JAJAJA</span>
-      </li>
-      <li>
-      <i class="icon-addtobasket"></i>
-      <span class="step-title">Uno o más productos</span>
-      </li>
-      <li>
-      <i class="icon-creditcard"></i>
-      <span class="step-title">Pagá</span>
-      </li>
-      <li>
-      <i class="icon-parcel"></i>
-      <span class="step-title">Coordiná la entrega</span>
-      </li>
-      <li>
-      <i class="icon-deliverycar"></i>
-      <span class="step-title">Lo enviamos a tu casa</span>
-      </li>
-      <li>
-      <i class="icon-piggybank"></i>
-      <span class="step-title">Listo</span>
-      </li>
-    </ul>
-  </div> -->
-  
+
   <div class="submenu hidden blured" id="como-comprar-menu">
     <ul class="container" id="purchase_flow">
       <li>
@@ -191,37 +181,9 @@
       </li>
     </ul>
   </div>
-
-  <!-- <div class="submenu hidden blured" id="soporte-menu">
-    <ul class="container">
-      <li>
-      <i class="icon-saletag"></i>
-      <span class="step-title">JDSJGFHJADHGHDFHGDFJAG</span>
-      </li>
-      <li>
-      <i class="icon-addtobasket"></i>
-      <span class="step-title">Uno o más productos</span>
-      </li>
-      <li>
-      <i class="icon-creditcard"></i>
-      <span class="step-title">Pagá</span>
-      </li>
-      <li>
-      <i class="icon-parcel"></i>
-      <span class="step-title">Coordiná la entrega</span>
-      </li>
-      <li>
-      <i class="icon-deliverycar"></i>
-      <span class="step-title">Lo enviamos a tu casa</span>
-      </li>
-      <li>
-      <i class="icon-piggybank"></i>
-      <span class="step-title">Listo</span>
-      </li>
-    </ul>
-  </div> -->
-  
 </div>
+
+
 
 <div class="main-content">
   <header class="clearfix">
@@ -241,7 +203,7 @@
         </div>
       </figure>
       <figure class="col-md-8 col-sm-8 picture-item" data-groups='["wallpaper","3d"]'>
-        <img src="images/slip.jpg"/>
+        <img src="images/slip.png"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>

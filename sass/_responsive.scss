@@ -1,5 +1,23 @@
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .jumbotron{
     display: none;
   }
+}
+@media screen and (min-width: 1200px) {
+  	.main-menu {
+  		.nav {
+  			&> li > a {
+  				font-size: 22px;
+    			padding: 1.6em 1.85em;
+    		}
+    	}
+    }
+    .submenu {
+    	ul.brands {
+    		li {
+    			width: 19.8%;
+				padding: 15px 25px 0;
+    		}
+    	}
+    }
 }

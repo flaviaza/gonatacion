@@ -22,6 +22,10 @@ $(document).on('click', 'a[data-toggle=tab]', function () {
                        : 'addClass'
 
     $('.contact-box')[action]('hide');
+  var action = $(this).hasClass('register') ? 'removeClass'
+                       : 'addClass'
+
+    $('.register-box')[action]('hide');
 
 });
 
