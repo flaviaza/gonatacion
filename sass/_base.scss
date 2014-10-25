@@ -27,9 +27,19 @@ a{
     -webkit-box-shadow:none;
   }
 }
-
-.highlight-blue{
+.highlight {
+  color: $highlight;
+}
+.favorite {
+  color: $favorite;
+}
+.buy {
+  color: $buy;
+}
+.highlight-blue, .product-container a, .cart a {
   color:$main;
+}
+.product-container a, .cart a {
   &:hover {
     color: darken($main, 10%);
   }
@@ -53,10 +63,13 @@ textarea::-webkit-input-placeholder {
   color: $placeholder;
 }
 
+.btn {
+  font-weight: 300;
+}
 
-.btn-success{
-  background-color: $btn-success-color;
-  border-color: $btn-success-color;
+.btn-buy {
+  background-color: $buy;
+  border-color: $buy;
   border-radius:0;
 }
 
@@ -156,24 +169,42 @@ ul{
   border-bottom:2px solid $main;
   margin-bottom:0;
   padding:10px 0;
-  .navbar-nav > li > a{
+  .navbar-nav > li > a {
     margin: 0 4px;
-    padding:8px;
-    &:hover{
-      background-color:transparent;
-      text-decoration:underline;
-    }
-    &.btn-ingresar{
-      background-color: $main;
-      color: $text-main;
-      @include border-radius(4px);
+    padding: 8px;
+    font-size: 17px;
+    &.btn-login {
+      background-color: $btn-bg-login;
+      color: $btn-color-login;
+      @include border-radius(3px);
       @include text-shadow(0 1px 4px lighten($main,10%));
-      i{
+      &:hover, &:focus {
+        background-color: lighten($btn-bg-login, 10%);
+      }
+      span {
         font-size:12px;
         margin-left:4px;
       }
-      &:hover{
-        text-decoration:none;
+    }
+    &.btn-logued {
+      background-color: $highlight;
+      color: $btn-color;
+      padding: 6px 5px 6px 8px;
+      &:hover, &:focus {
+        background-color: lighten($highlight, 10%);
+      }
+      span {
+        margin-left:4px;
+        vertical-align: sub;
+        text-shadow: none;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    span {
+      &.big-icon {
+        font-size: 24px;
       }
     }
   }
@@ -207,6 +238,7 @@ ul{
   .product-title{
     line-height:48px;
     margin:0;
+    font-weight: 100;
   }
 }
 

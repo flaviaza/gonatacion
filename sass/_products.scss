@@ -1,8 +1,23 @@
 @import 'variables';
+@import 'compass/css3/text-shadow';
 
 
 // Product page styles
 // ======================================================================
+
+.products {
+	.btn {
+		&.btn-buy {
+			padding: 9px 14px;
+			font-size: 17px;
+			border-radius: 3px;
+			@include text-shadow(0 1px 2px rgba(0,0,0,.5));
+			vertical-align: middle;
+			font-weight: 300;
+			color: $btn-color;
+		}
+	}
+}
 
 .product-container {
 	position:relative;
@@ -53,13 +68,9 @@
 		padding: 8px 10px;
 		text-align: right;
 		.btn {
-			padding: 6px 15px;
-			font-size: 20px;
-			border-radius: 3px;
-			@include text-shadow(0 1px 4px lighten($main,10%));
-			vertical-align: middle;
-			margin-left: 5px;
-			font-weight: 300;
+			&.btn-buy {
+				margin-left: 5px;
+			}
 		}
 		a {
 			vertical-align: middle;
@@ -100,5 +111,124 @@
 	.price {
 		font-weight:100;
 		margin:0;
+	}
+}
+
+.cart {
+	margin-top: 20px;
+	h2 {
+		color: $success;
+		@include text-shadow(rgba(black, 0.2) 1px 2px 4px);
+		padding-left: 10px;
+		margin-bottom: 20px;
+	}
+	thead {
+		background-color: $main;
+		color: $table-header-text-color;
+	}
+	td {
+		font-size: 30px;
+	}
+	.input-group .form-control:first-child {
+		@include border-radius(3px);
+	}
+	input[type="text"] {
+		font-size: 30px;
+		border: none;
+		@include box-shadow(-1px 1px 5px rgba(0,0,0,.175));
+		width: 70px;
+		&.input-lg {
+			height: 46px;
+			padding: 10px 9px;
+			margin-left: 5px;
+		}
+	}
+	.input-group-btn {
+		width: 58%;
+		&:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+			@include border-radius(4px);
+		}
+	}
+	.btn {
+		&.btn-update,
+		&.btn-remove {
+			padding: 12px 16px 10px;
+			font-size: 16px;
+			@include border-radius(3px);
+			margin-right: 4px;
+			color: $btn-color;
+			@include box-shadow(-1px 1px 5px rgba(0,0,0,.15));
+		}
+		&.btn-update {
+			background-color: $btn-bg-update;
+		}
+		&.btn-remove {
+			background-color: $btn-bg-remove;
+		}
+		&.btn-buy {
+			padding: 9px 9px;
+		}
+	}
+}
+.table-bordered {
+	&> thead > tr > th {
+		padding: 13px;
+		font-size: 18px;
+		font-weight: normal;
+		border: none;
+	}
+	&> tbody > tr > td {
+		border-color: $bg;
+	}
+}
+.table-striped {
+	&> tbody > tr:nth-child(2n+1) > td {
+		background-color: $table-bg-color;
+	}
+}
+
+.table {
+	&> tbody > tr > td {
+		background-color: $table-zebra-bg-color;
+		color: $table-text-color;
+		vertical-align: middle;
+		&.item-description {
+			padding: 2px;
+			line-height: 0.6em;
+			&> img {
+				max-width: 65px;
+				float: left;
+				margin-right: 15px;
+			}	
+			a {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.short-description,
+			.brand {
+				display: block;
+				color: $text-description;
+				font-style: italic;
+				font-size: 14px;
+			}
+			.short-description {
+				margin-top: 3px;
+			}
+		}
+		&.empty-cell {
+			background-color: transparent;
+		}
+	}
+	th {
+		&.product-column {
+			width: 50%;
+		}
+		&.quantity-column {
+			width: 18%;
+		}
+		&.price-column, &.total-column {
+			width: 16%;
+			text-align: center;
+		}
 	}
 }
