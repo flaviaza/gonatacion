@@ -43,15 +43,21 @@
   </header>
   <div class="navbar search-nav">
     <div class="container">
-      <h3 class="pull-left product-title">Roller 130c</h3>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control">
+      <div class="row">
+        <div class="col-md-9">
+          <h3 class="product-title">Roller 130c</h3>
         </div>
-        <button type="submit" class="btn btn-default pull-right">
-          <span class="icon-magnifier"></span>
-        </button>
-      </form>
+        <div class="col-md-3">
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-default pull-right">
+              <span class="icon-magnifier"></span>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -60,12 +66,10 @@
   <div class="container">
     <div class="row product-container">
       <figure class="col-md-8 product-pic">
-        <div class="magnifier-thumb-wrapper">
-          <img id="thumb" src="images/roller-big.jpg" data-large-img-url="images/roller-big.jpg" data-large-img-wrapper="preview">/>
-        </div>
+        <img id="thumb" src="images/roller-gris.jpg" data-zoom-image="images/roller-gris.jpg"/>
       </figure>
 
-      <div class="col-md-4 product-info magnifier-preview" id="preview">
+      <div class="col-md-4 product-info">
         <div class="product-price">
           <h2 class="price">$540</h2>
         </div>
@@ -280,21 +284,16 @@
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="javascripts/bootstrap.js"></script>
-  <script src="javascripts/jquery.shuffle.modernizr.js"></script>
-  <script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
-  <script src="javascripts/marfed.js" type="text/javascript"></script>
-  <script src="javascripts/Event.js" type="text/javascript"></script>
-  <script src="javascripts/Gallery.js" type="text/javascript"></script>
-  <script src="javascripts/Magnifier.js" type="text/javascript"></script>
+  <script src="javascripts/global.min.js"></script>
+
   <script type="text/javascript">
-    var evt = new Event(),
-        m = new Magnifier(evt);
-    m.attach({
-      thumb: '#thumb',
-      zoom: 2,
-      zoomable: true
-    });
+    $('#thumb').elevateZoom({
+      zoomWindowHeight: 430, 
+      zoomWindowWidth:375, 
+      borderSize: 0,
+      zoomWindowFadeIn: 200,
+      zoomWindowFadeOut: 200
+    }); 
   </script>
 
   </body>

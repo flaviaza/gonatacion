@@ -21,6 +21,7 @@
   bottom: 110px; 
   margin: 0px auto;
   width: 100%;
+  display: none;
   &.large {
     height: 235px;
     padding-top: 12px;
@@ -103,6 +104,7 @@
   }
 }
 .blured{
+  background-color: none;
   &:after{
     display: block;
     position: absolute;
@@ -112,6 +114,9 @@
     height: 180px;
     z-index: -2;
     content: '\00a0';
+    background-image: url('../images/meolans.jpg');
+    background-position: center -48%;
+    background-size: 100% auto;
     @include filter(blur(5px) grayscale(100%));
   }
   &:before{

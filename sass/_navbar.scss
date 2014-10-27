@@ -1,0 +1,189 @@
+@import 'variables';
+@import 'compass/css3/text-shadow';
+
+
+// Navbar styles
+// ======================================================================
+
+.navbar-fixed-top {
+  position: absolute;
+}
+.navbar-brand{
+  width: 261px;
+  img {
+    display: block;
+    .home {
+      width: 200px;
+    }
+  }
+  span {
+    text-align: center;
+    color: $text-contrast;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    padding-top: 10px;
+    @include text-shadow(0 1px 2px $navigation-bg);
+  }
+}
+.navbar-inverse {
+  z-index: 5;
+  .container{
+    height: 0;
+  }
+  background: transparent none;
+  border-color: transparent;
+  .navbar-collapse{
+    border-color: transparent;
+    .container {
+      position: relative;
+    }
+  }
+  .navbar-nav{
+    float: right;
+    margin-right: 40px;
+    &> li > a{
+      font-size: 14px;
+      padding: 24px 30px;
+      color: $text-contrast;
+      text-transform: uppercase;
+      @include text-shadow(0 1px 4px $navigation-bg);
+    }
+    &> li > a:hover,
+    &> .active > a,
+    &> .active > a:hover,
+    &> .active > a:focus{
+      background-color: $main;
+      color: $text-main;
+      border-top-color: $active;
+      text-shadow: none;
+    }
+  }
+}
+ul{
+  &> .active > a,
+  &> .active > a:hover,
+  &> .active > a:focus{
+    background-color: $main;
+    color: $text-main;
+    border-top-color: $active;
+    @include text-shadow(0 1px 4px lighten($main,10%));
+  }
+}
+
+.inner-page-nav{
+  background-color:black;
+  border-bottom:2px solid $main;
+  margin-bottom:0;
+  padding:10px 0;
+  .navbar-nav > li > a {
+    margin: 0 4px;
+    padding: 8px;
+    font-size: 17px;
+    &.btn-login {
+      background-color: $btn-bg-login;
+      color: $btn-color-login;
+      @include border-radius(3px);
+      @include text-shadow(0 1px 4px lighten($main,10%));
+      &:hover, &:focus {
+        background-color: lighten($btn-bg-login, 10%);
+      }
+      span {
+        font-size:12px;
+        margin-left:4px;
+      }
+    }
+    &.btn-logued {
+      background-color: $highlight;
+      color: $btn-color;
+      padding: 6px 5px 6px 8px;
+      &:hover, &:focus {
+        background-color: lighten($highlight, 10%);
+      }
+      span {
+        margin-left:4px;
+        vertical-align: sub;
+        text-shadow: none;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    span {
+      &.big-icon {
+        font-size: 24px;
+      }
+    }
+  }
+  .navbar-brand{
+    height:auto;
+    padding:0;
+  }
+}
+
+ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
+	&.products-navbar {
+		color: $bg;
+		background-color: transparent;
+	}
+}
+
+.submenu {
+	&.products-navbar-box {
+		top: 61px;
+		bottom: auto;
+		display: none;
+	}
+}
+.nav {
+	height: 39px;
+	&> li {
+	    &> a {
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				outline-color: $text-contrast;
+			}
+		}
+	}
+	.open {
+		&> a, &> a:hover, &> a:focus {
+			border-color: transparent;
+		}
+	}
+}
+
+.dropdown-menu {
+	padding: 15px 10px;
+	top: 51px;
+	width: 220px;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	&> li {
+		border-top: 1px solid rgba(255, 255, 255, 0.27);
+		border-bottom: 1px solid rgba(0, 76, 160, 0.67);
+		&>a {
+			font-weight: 100;
+			font-size: 17px;
+			padding: 3px 13px 5px;
+			color: $link-color;
+			@include text-shadow(0 1px 2px $navigation-bg);
+			&:hover {
+				color: $text-contrast;
+				background-color: transparent;
+			}
+		}
+		&:last-child {
+			border-bottom-width: 0;
+		}
+		&:first-child {
+			border-top-width: 0;
+		}
+	}
+}
+.navbar-right {
+	.dropdown-menu {
+		left: -44px;
+	}
+}

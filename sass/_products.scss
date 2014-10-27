@@ -24,9 +24,14 @@
 	.product-pic{
 		height:450px;
 		overflow:hidden;
+		padding-right: 0;
+		img {
+			width: 100%;
+			height: auto;
+		}
 	}
 	.product-info {
-		height:450px;
+		height:430px;
 		position:relative;
 		padding-left: 0;
 	}
@@ -34,7 +39,7 @@
 		width:10%;
 	}
 	.product-options {
-		height: 75%;
+		height: 73%;
 		padding: 20px 0 0 20px;
 	}
 	.pricing-options {
@@ -63,7 +68,7 @@
 		}
 	}
 	.buying-options {
-		height: 13%;
+		height: 15%;
 		background-color: $bg-heading;
 		padding: 8px 10px;
 		text-align: right;

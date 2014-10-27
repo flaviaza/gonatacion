@@ -75,6 +75,7 @@ textarea::-webkit-input-placeholder {
 
 body{
   font-family: 'Lato', Arial, sans-serif;
+  line-height: 1.31;
   background: $bg;
   &.home{
     width: 100%;
@@ -97,120 +98,6 @@ body{
         display: block;
       }
     }
-  }
-}
-.navbar-fixed-top {
-  position: absolute;
-}
-.navbar-brand{
-  width: 261px;
-  img {
-    display: block;
-    .home {
-      width: 200px;
-    }
-  }
-  span {
-    text-align: center;
-    color: $text-contrast;
-    text-transform: uppercase;
-    font-size: 18px;
-    display: block;
-    padding-top: 10px;
-    @include text-shadow(0 1px 2px $navigation-bg);
-  }
-}
-.navbar-inverse {
-  .container{
-    height: 0;
-  }
-  background: transparent none;
-  border-color: transparent;
-  .navbar-collapse{
-    border-color: transparent;
-    .container {
-      position: relative;
-    }
-  }
-  .navbar-nav{
-    float: right;
-    margin-right: 40px;
-    &> li > a{
-      font-size: 14px;
-      padding: 24px 30px;
-      color: $text-contrast;
-      text-transform: uppercase;
-      @include text-shadow(0 1px 4px $navigation-bg);
-    }
-    &> li > a:hover,
-    &> .active > a,
-    &> .active > a:hover,
-    &> .active > a:focus{
-      background-color: $main;
-      color: $text-main;
-      border-top-color: $active;
-      text-shadow: none;
-    }
-  }
-}
-ul{
-  &> .active > a,
-  &> .active > a:hover,
-  &> .active > a:focus{
-    background-color: $main;
-    color: $text-main;
-    border-top-color: $active;
-    @include text-shadow(0 1px 4px lighten($main,10%));
-  }
-}
-
-.inner-page-nav{
-  background-color:black;
-  border-bottom:2px solid $main;
-  margin-bottom:0;
-  padding:10px 0;
-  .navbar-nav > li > a {
-    margin: 0 4px;
-    padding: 8px;
-    font-size: 17px;
-    &.btn-login {
-      background-color: $btn-bg-login;
-      color: $btn-color-login;
-      @include border-radius(3px);
-      @include text-shadow(0 1px 4px lighten($main,10%));
-      &:hover, &:focus {
-        background-color: lighten($btn-bg-login, 10%);
-      }
-      span {
-        font-size:12px;
-        margin-left:4px;
-      }
-    }
-    &.btn-logued {
-      background-color: $highlight;
-      color: $btn-color;
-      padding: 6px 5px 6px 8px;
-      &:hover, &:focus {
-        background-color: lighten($highlight, 10%);
-      }
-      span {
-        margin-left:4px;
-        vertical-align: sub;
-        text-shadow: none;
-      }
-    }
-    &:hover {
-      background-color: transparent;
-    }
-    span {
-      &.big-icon {
-        font-size: 24px;
-      }
-    }
-  }
-  .navbar-brand{
-    height:auto;
-    padding:0;
   }
 }
 
@@ -239,6 +126,7 @@ ul{
     line-height:48px;
     margin:0;
     font-weight: 100;
+    @include text-shadow(0 1px 0 $bg);
   }
 }
 
@@ -254,7 +142,7 @@ ul{
 
 .main-content{
   background: $bg none;
-  padding-top: 1px;
+  padding: 1px 0 70px;
 }
 
 .jumbotron{
@@ -291,6 +179,7 @@ footer{
 ul.products-list{
   list-style:none;
   padding-left: 25px;
+  max-width: 190px;
   li{
     padding:4px 0 6px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .20) inset, 0 1px 0 rgba(255, 255, 255, .05);
@@ -301,11 +190,15 @@ ul.products-list{
       color:$blue;
       margin:0;
       font-weight: 300;
+      @include text-shadow(0 1px 2px $navigation-bg);
     }
     a{
       font-weight:100;
-      text-shadow: 2px 2px black;
+      @include text-shadow(0 1px 2px $navigation-bg);
     }
   }
 }
 
+.transparent-bg {
+    background-color: rgba(59, 136, 190, 0.9);
+}
