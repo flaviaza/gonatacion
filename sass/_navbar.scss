@@ -41,33 +41,32 @@
   }
   .navbar-nav{
     float: right;
-    margin-right: 40px;
+
     &> li > a{
-      font-size: 14px;
+      font-size: 15px;
       padding: 24px 30px;
-      color: $text-contrast;
-      text-transform: uppercase;
-      @include text-shadow(0 1px 4px $navigation-bg);
+      color: $grey;
+      background-color: transparent;
     }
     &> li > a:hover,
     &> .active > a,
     &> .active > a:hover,
     &> .active > a:focus{
-      background-color: $main;
       color: $text-main;
-      border-top-color: $active;
       text-shadow: none;
+      background-color: $main;
     }
   }
 }
-ul{
+
+ul {
   &> .active > a,
   &> .active > a:hover,
   &> .active > a:focus{
-    background-color: $main;
+    background-color: transparent;
     color: $text-main;
     border-top-color: $active;
-    @include text-shadow(0 1px 4px lighten($main,10%));
+    //@include text-shadow(0 1px 4px lighten($main,10%));
   }
 }
 
@@ -76,10 +75,14 @@ ul{
   border-bottom:2px solid $main;
   margin-bottom:0;
   padding:10px 0;
+  .navbar-brand {
+    width: 53px;
+  }
   .navbar-nav > li > a {
-    margin: 0 4px;
-    padding: 8px;
+    margin-right: 4px;
+    padding: 9px;
     font-size: 17px;
+    color: $blured-menu-text;
     &.btn-login {
       background-color: $btn-bg-login;
       color: $btn-color-login;
@@ -96,28 +99,42 @@ ul{
     &.btn-logued {
       background-color: $highlight;
       color: $btn-color;
-      padding: 6px 5px 6px 8px;
+      padding: 4px 5px 6px 8px;
+      margin: 0 12px 0 8px;
       &:hover, &:focus {
         background-color: lighten($highlight, 10%);
       }
       span {
-        margin-left:4px;
+        margin-left: 4px;
         vertical-align: sub;
         text-shadow: none;
       }
     }
+    &.nav-icon {
+      margin-top: -4px;
+    }
     &:hover {
       background-color: transparent;
+      color: $text-contrast;
     }
-    span {
-      &.big-icon {
-        font-size: 24px;
-      }
-    }
+  }
+  .submenu {
+    bottom:250px;
   }
   .navbar-brand{
     height:auto;
     padding:0;
+  }
+  .mega-dropdown-menu {
+    top: 59px;
+  }
+  .nav {
+    .open {
+      &> a, &> a:hover, &> a:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
   }
 }
 
@@ -128,13 +145,6 @@ ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
 	}
 }
 
-.submenu {
-	&.products-navbar-box {
-		top: 61px;
-		bottom: auto;
-		display: none;
-	}
-}
 .nav {
 	height: 39px;
 	&> li {
@@ -149,27 +159,28 @@ ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
 	.open {
 		&> a, &> a:hover, &> a:focus {
 			border-color: transparent;
+      background-color: transparent;
 		}
 	}
 }
 
 .dropdown-menu {
 	padding: 15px 10px;
-	top: 51px;
+	top: 49px;
 	width: 220px;
 	border-radius: 0;
 	box-shadow: none;
 	border: none;
-	&> li {
+  &> li {
 		border-top: 1px solid rgba(255, 255, 255, 0.27);
 		border-bottom: 1px solid rgba(0, 76, 160, 0.67);
 		&>a {
 			font-weight: 100;
 			font-size: 17px;
 			padding: 3px 13px 5px;
-			color: $link-color;
 			@include text-shadow(0 1px 2px $navigation-bg);
-			&:hover {
+      color: darken($text-contrast, 10%);
+			&:hover, &:focus {
 				color: $text-contrast;
 				background-color: transparent;
 			}
@@ -182,8 +193,16 @@ ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
 		}
 	}
 }
+
 .navbar-right {
-	.dropdown-menu {
-		left: -44px;
-	}
+  .dropdown-user {
+  	left: -44px;
+    background-color: transparent;
+  }
+}
+
+.mega-dropdown { position: static !important; }
+.mega-dropdown-menu {
+  padding: 0;
+  width: 100%;
 }

@@ -6,7 +6,7 @@ $(document).ready(function() {
     itemSelector: '.picture-item',
     sizer: $sizer
   });
-})
+});
 
 // Home - Login animation
 // ======================================================================
@@ -25,26 +25,34 @@ $(document).on('click', 'a[data-toggle=tab]', function () {
 });
 
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  // Home - Main menú animation
-  // ======================================================================
 
-  $(".main-menu a").hover(function() {
-    idItem = $(this).attr('id');
-    $("#" + idItem + "-menu").toggle();
-  }, function() {
-    $("#" + idItem + "-menu").toggle();
-  });
   
-  // Product page - Products menu
-  // ======================================================================
+//   // Product page - Products menu
+//   // ======================================================================
 
-  $(".products-navbar").click(function() {
-    $( ".products-navbar-box" ).toggle();
-  });
-  $(".products-navbar").blur(function() {
-    $( ".products-navbar-box" ).toggle();
-  });
+//   $(".products-navbar").click(function() {
+//     $( ".products-navbar-box" ).toggle();
+//   });
+//   $(".products-navbar").on("blur", function() {
+//     $( ".products-navbar-box" ).toggle();
+//   });
 
+// });
+
+// Home - Main menú animation
+// ======================================================================
+
+$(document).ready(function(){
+    $(".main-menu .dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true );
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true );
+            $(this).toggleClass('open');       
+        }
+    );
 });

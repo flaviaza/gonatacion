@@ -7,16 +7,16 @@
   @include box-sizing(border-box);
 }
 
-a{
-  color:$link-color;
+a {
+  color: $main;
   font-weight:300;
-  &:hover{
-    color:$bg;
+  &:hover {
+    color: darken($main, 10%);
     text-decoration:none;
   }
 }
 
-.btn{
+.btn {
   &:focus, &:active{
     outline: none;
     outline-offset: 0;
@@ -27,6 +27,9 @@ a{
     -webkit-box-shadow:none;
   }
 }
+.big-icon {
+  font-size: 28px;
+}
 .highlight {
   color: $highlight;
 }
@@ -35,14 +38,6 @@ a{
 }
 .buy {
   color: $buy;
-}
-.highlight-blue, .product-container a, .cart a {
-  color:$main;
-}
-.product-container a, .cart a {
-  &:hover {
-    color: darken($main, 10%);
-  }
 }
 
 input:focus{
@@ -123,10 +118,40 @@ body{
     }
   }
   .product-title{
-    line-height:48px;
+    line-height:51px;
     margin:0;
-    font-weight: 100;
+    font-weight: 300;
     @include text-shadow(0 1px 0 $bg);
+  }
+}
+.blured{
+  background-color: none;
+  &:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    content: '\00a0';
+  }
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: '\00a0';
+    background-color: darken($main, 20%);
+    @include opacity(.7);
+  }
+  &.large {
+    &:before, &:after {
+      height: 235px;
+    }
   }
 }
 
@@ -176,7 +201,7 @@ footer{
   }
 }
 
-ul.products-list{
+ul.products-column{
   list-style:none;
   padding-left: 25px;
   max-width: 190px;
@@ -192,9 +217,12 @@ ul.products-list{
       font-weight: 300;
       @include text-shadow(0 1px 2px $navigation-bg);
     }
-    a{
-      font-weight:100;
+    a {
+      color: darken($text-contrast, 10%);
       @include text-shadow(0 1px 2px $navigation-bg);
+      &:hover, &:focus {
+        color: $text-contrast;
+      }
     }
   }
 }

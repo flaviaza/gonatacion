@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?4bq5g1');
-	src:url('../fonts/icomoon.eot?#iefix4bq5g1') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?4bq5g1') format('woff'),
-		url('../fonts/icomoon.ttf?4bq5g1') format('truetype'),
-		url('../fonts/icomoon.svg?4bq5g1#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?wotc39');
+	src:url('../fonts/icomoon.eot?#iefixwotc39') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?wotc39') format('woff'),
+		url('../fonts/icomoon.ttf?wotc39') format('truetype'),
+		url('../fonts/icomoon.svg?wotc39#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,17 +23,23 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-addtoemptybasket:before {
+.icon-user:before{
+	content: "\e600";
+}
+.icon-addtobasket:before {
 	content: "\e601";
 }
-.icon-barcode:before {
+.icon-addtoemptybasket:before {
 	content: "\e602";
 }
-.icon-cart:before {
+.icon-barcode:before {
 	content: "\e603";
 }
-.icon-checkout:before {
+.icon-cart:before {
 	content: "\e604";
+}
+.icon-checkout:before {
+	content: "\e605";
 }
 .icon-creditcard:before {
 	content: "\e606";
@@ -42,40 +48,34 @@
 	content: "\e607";
 }
 .icon-discountlabel:before {
-	content: "\e607";
-}
-.icon-discounttag:before {
 	content: "\e608";
 }
-.icon-dollarlabel:before {
+.icon-discounttag:before {
 	content: "\e609";
 }
-.icon-dollarnotes:before {
+.icon-dollarlabel:before {
 	content: "\e60a";
 }
-.icon-dollartag:before {
+.icon-dollarnotes:before {
 	content: "\e60b";
 }
-.icon-emptybasket:before {
+.icon-dollartag:before {
 	content: "\e60c";
 }
-.icon-eurolabel:before {
+.icon-emptybasket:before {
 	content: "\e60d";
 }
-.icon-addtobasket:before {
-	content: "\e601";
-}
-.icon-plus-sign:before {
-	content: "\e61c";
-}
-.icon-euronotes:before {
+.icon-eurolabel:before {
 	content: "\e60e";
 }
-.icon-eurotag:before {
+.icon-euronotes:before {
 	content: "\e60f";
 }
-.icon-invoice:before {
+.icon-eurotag:before {
 	content: "\e610";
+}
+.icon-invoice:before {
+	content: "\e611";
 }
 .icon-magnifier:before {
 	content: "\e612";
@@ -84,7 +84,7 @@
 	content: "\e613";
 }
 .icon-open:before {
-	content: "\e613";
+	content: "\e614";
 }
 .icon-parcel:before {
 	content: "\e615";
@@ -102,11 +102,27 @@
 	content: "\e619";
 }
 .icon-ShoppingBag:before {
-	content: "\e619";
+	content: "\e61a";
 }
 .icon-shoppingbasket:before {
 	content: "\e61b";
 }
-.icon-user:before{
-	content: "\e600";
+.icon-plus-sign:before {
+	content: "\e61c";
 }
+.icon-support:before {
+	content: "\e61d";
+}
+.icon-facebook:before {
+	content: "\e61e";
+}
+.icon-favorite:before {
+	content: "\e61f";
+}
+.icon-update:before {
+	content: "\e620";
+}
+.icon-remove:before {
+	content: "\e621";
+}
+

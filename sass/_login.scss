@@ -6,7 +6,7 @@
 
 .login-box, .contact-box, .register-box {
     position: absolute;
-    top: 140px;
+    top: 110px;
     right: 15px;
     width: 480px;
     z-index: 5;
@@ -46,6 +46,7 @@
 	    padding: 10px 16px;
 	    border: none;
 	    outline: none;
+	    display: block;
 	}
 }
 .user-data, .password-data { 

@@ -5,16 +5,18 @@
 // Product page styles
 // ======================================================================
 
-.products {
-	.btn {
-		&.btn-buy {
-			padding: 9px 14px;
-			font-size: 17px;
-			border-radius: 3px;
-			@include text-shadow(0 1px 2px rgba(0,0,0,.5));
-			vertical-align: middle;
-			font-weight: 300;
-			color: $btn-color;
+.btn {
+	&.btn-buy {
+		padding: 9px 14px;
+		font-size: 17px;
+		border-radius: 3px;
+		@include text-shadow(0 1px 2px rgba(0,0,0,.5));
+		vertical-align: middle;
+		font-weight: 300;
+		color: $btn-color;
+		[class^="icon-"], [class*=" icon-"] {
+			font-size: 23px;
+			vertical-align: top;
 		}
 	}
 }
@@ -30,7 +32,7 @@
 			height: auto;
 		}
 	}
-	.product-info {
+	.product-info { 
 		height:430px;
 		position:relative;
 		padding-left: 0;
@@ -55,18 +57,6 @@
 			font-size: 28px;
 		}
 	}
-	.description {
-		background-color:white;
-		color:$text-description;
-		margin: 26px 0 10px;
-		padding: 5px 18px;
-		width: 95%;
-		p {
-			font-size:13px;
-			font-weight:300;
-			line-height:18px;
-		}
-	}
 	.buying-options {
 		height: 15%;
 		background-color: $bg-heading;
@@ -87,6 +77,24 @@
 			}
 		}
 	}
+}
+
+.text-block {
+	background-color:white;
+	color:$text-description;
+	margin: 25px 0;
+	padding: 5px 18px;
+	width: 95%;
+	border-radius: 3px;
+	
+}
+
+.text-description {
+	font-size:13px;
+	font-weight:300;
+	line-height:18px;
+	font-style: italic;
+	color:$text-description;
 }
 
 .details-option {
@@ -120,7 +128,6 @@
 }
 
 .cart {
-	margin-top: 20px;
 	h2 {
 		color: $success;
 		@include text-shadow(rgba(black, 0.2) 1px 2px 4px);
@@ -132,6 +139,12 @@
 		color: $table-header-text-color;
 	}
 	td {
+		font-size: 26px;
+		height: 70px;
+		@include text-shadow(0 1px 0 $bg);
+		font-weight: 300;
+	}
+	.total-cell {
 		font-size: 30px;
 	}
 	.input-group .form-control:first-child {
@@ -170,12 +183,10 @@
 		&.btn-remove {
 			background-color: $btn-bg-remove;
 		}
-		&.btn-buy {
-			padding: 9px 9px;
-		}
 	}
 }
 .table-bordered {
+	border: 0;
 	&> thead > tr > th {
 		padding: 13px;
 		font-size: 18px;
@@ -193,13 +204,14 @@
 }
 
 .table {
+	margin: 0;
 	&> tbody > tr > td {
 		background-color: $table-zebra-bg-color;
 		color: $table-text-color;
 		vertical-align: middle;
 		&.item-description {
 			padding: 2px;
-			line-height: 0.6em;
+			line-height: 0.7em;
 			&> img {
 				max-width: 65px;
 				float: left;
@@ -226,14 +238,89 @@
 	}
 	th {
 		&.product-column {
-			width: 50%;
+			width: 48%;
 		}
 		&.quantity-column {
 			width: 18%;
 		}
 		&.price-column, &.total-column {
-			width: 16%;
+			width: 17%;
 			text-align: center;
+		}
+	}
+}
+
+.checkout-block {
+	width: 34%;
+	float: right;
+	.btn.btn-buy {
+		padding: 9px;
+		&:first-child {
+			margin-right: 9px;
+		}
+	}
+	.call-to-action {
+		padding: 12px 0;
+		background: $table-bg-color;
+		text-align: center;
+	}
+}
+
+.products-list {
+	border-top: 1px dashed $main;
+
+	.product {
+		width: 25%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 2px;
+		border-left: 1px dashed $main;
+		border-bottom: 1px dashed $main;
+		&:last-child {
+			border-right: 1px dashed $main;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
+		h4 {
+			margin: 0 0 3px;
+			font-size: 17px;
+		}
+		.info-text {
+			padding: 10px 10px 5px;
+		}
+		.description {
+			height: 50px;
+		}
+		.price {
+			font-size: 24px;
+			color: $main;
+			font-weight: 300;
+		}
+		.action-options {
+			background: $bg-grey;
+			height: 50px;
+			.icons {
+				border-right: 1px solid $bg;
+				float: left;
+			}
+			a {
+				padding: 0 8px;
+			}
+			.big-icon {
+				font-size: 30px;
+				color: $product-btn;
+				@include text-shadow(0 1px 2px rgba(0,0,0,.3));
+				line-height: 1.6;
+			}
+			.btn-buy {
+				background: $bg-grey;
+				border-color: $bg-grey;
+				float: right;
+				color: $product-btn;
+				padding: 12px 11px;
+			}
 		}
 	}
 }

@@ -1,4 +1,5 @@
 $bg: #fafafa;
+$bg-grey: #ededed;
 $blured-menu-text: #c2c2c2;
 $bg-heading: #e4e4e4;
 $main: #0095da;
@@ -12,8 +13,9 @@ $update: #0093d7;
 $remove: #fc1200;
 $favorite: #fc1200;
 $buy: #0bce0b;
+$product-btn: #9c9c9c;
 
-$link-color:#c4c4c4;
+$link-color:$main;
 $blue: #2c94c5;
 $grey:#d7d7d7;
 $light-grey:#dddddd;
@@ -23,7 +25,7 @@ $text-description:#707070;
 $table-header-text-color: #FFFFFF;
 $table-text-color: #434444;
 $table-bg-color: #F2F2F2;
-$table-zebra-bg-color: #ededed;
+$table-zebra-bg-color: $bg-grey;
 $btn-color: #ffffff;
 
 $btn-color-login: #035a92;

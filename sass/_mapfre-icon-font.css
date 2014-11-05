@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?4bq5g1');
-	src:url('../fonts/icomoon.eot?#iefix4bq5g1') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?4bq5g1') format('woff'),
-		url('../fonts/icomoon.ttf?4bq5g1') format('truetype'),
-		url('../fonts/icomoon.svg?4bq5g1#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?wotc39');
+	src:url('../fonts/icomoon.eot?#iefixwotc39') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?wotc39') format('woff'),
+		url('../fonts/icomoon.ttf?wotc39') format('truetype'),
+		url('../fonts/icomoon.svg?wotc39#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,88 +23,106 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-addtoemptybasket:before {
-	content: "\e601";
-}
-.icon-barcode:before {
-	content: "\e602";
-}
-.icon-cart:before {
-	content: "\e603";
-}
-.icon-checkout:before {
-	content: "\e604";
-}
-.icon-creditcard:before {
-	content: "\e605";
-}
-.icon-deliverycar:before {
-	content: "\e606";
-}
-.icon-discountlabel:before {
-	content: "\e607";
-}
-.icon-discounttag:before {
-	content: "\e608";
-}
-.icon-dollarlabel:before {
-	content: "\e609";
-}
-.icon-dollarnotes:before {
-	content: "\e60a";
-}
-.icon-dollartag:before {
-	content: "\e60b";
-}
-.icon-emptybasket:before {
-	content: "\e60c";
-}
-.icon-eurolabel:before {
-	content: "\e60d";
-}
-.icon-addtobasket:before {
+.icon-user:before{
 	content: "\e600";
 }
-.icon-plus-sign:before {
-	content: "\e61b";
+.icon-addtobasket:before {
+	content: "\e601";
 }
-.icon-euronotes:before {
+.icon-addtoemptybasket:before {
+	content: "\e602";
+}
+.icon-barcode:before {
+	content: "\e603";
+}
+.icon-cart:before {
+	content: "\e604";
+}
+.icon-checkout:before {
+	content: "\e605";
+}
+.icon-creditcard:before {
+	content: "\e606";
+}
+.icon-deliverycar:before {
+	content: "\e607";
+}
+.icon-discountlabel:before {
+	content: "\e608";
+}
+.icon-discounttag:before {
+	content: "\e609";
+}
+.icon-dollarlabel:before {
+	content: "\e60a";
+}
+.icon-dollarnotes:before {
+	content: "\e60b";
+}
+.icon-dollartag:before {
+	content: "\e60c";
+}
+.icon-emptybasket:before {
+	content: "\e60d";
+}
+.icon-eurolabel:before {
 	content: "\e60e";
 }
-.icon-eurotag:before {
+.icon-euronotes:before {
 	content: "\e60f";
 }
-.icon-invoice:before {
+.icon-eurotag:before {
 	content: "\e610";
 }
-.icon-magnifier:before {
+.icon-invoice:before {
 	content: "\e611";
 }
-.icon-newbadge:before {
+.icon-magnifier:before {
 	content: "\e612";
 }
-.icon-open:before {
+.icon-newbadge:before {
 	content: "\e613";
 }
-.icon-parcel:before {
+.icon-open:before {
 	content: "\e614";
 }
-.icon-piggybank:before {
+.icon-parcel:before {
 	content: "\e615";
 }
-.icon-removefrombasket:before {
+.icon-piggybank:before {
 	content: "\e616";
 }
-.icon-salebadge:before {
+.icon-removefrombasket:before {
 	content: "\e617";
 }
-.icon-saletag:before {
+.icon-salebadge:before {
 	content: "\e618";
 }
-.icon-ShoppingBag:before {
+.icon-saletag:before {
 	content: "\e619";
 }
-.icon-shoppingbasket:before {
+.icon-ShoppingBag:before {
 	content: "\e61a";
+}
+.icon-shoppingbasket:before {
+	content: "\e61b";
+}
+.icon-plus-sign:before {
+	content: "\e61c";
+}
+.icon-support:before {
+	content: "\e61d";
+}
+.icon-facebook:before {
+	content: "\e61e";
+}
+.icon-favorite:before {
+	content: "\e61f";
+}
+.icon-update:before {
+	content: "\e620";
+}
+.icon-remove:before {
+	content: "\e621";
 }
 

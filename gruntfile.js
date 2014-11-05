@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             separator: ';'
           },
           dist: {
-            src: ['javascripts/bootstrap.js', 'javascripts/jquery.shuffle.modernizr.js', 'javascripts/jquery.shuffle.min.js', 'javascripts/marfed.js', 'javascripts/jquery.elevateZoom-3.0.8.min.js', 'javascripts/Gallery.js'],
+            src: ['javascripts/bootstrap.js', 'javascripts/jquery.shuffle.modernizr.js', 'javascripts/jquery.shuffle.min.js', 'javascripts/jquery.elevateZoom-3.0.8.min.js', 'javascripts/Gallery.js', 'javascripts/marfed.js'],
             dest: 'javascripts/global.js'
           }
         },
