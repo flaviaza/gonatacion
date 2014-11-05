@@ -83,6 +83,7 @@ ul {
     padding: 9px;
     font-size: 17px;
     color: $blured-menu-text;
+    text-transform: uppercase;
     &.btn-login {
       background-color: $btn-bg-login;
       color: $btn-color-login;
@@ -101,6 +102,7 @@ ul {
       color: $btn-color;
       padding: 4px 5px 6px 8px;
       margin: 0 12px 0 8px;
+      text-transform: capitalize;
       &:hover, &:focus {
         background-color: lighten($highlight, 10%);
       }
