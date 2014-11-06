@@ -24,35 +24,18 @@ $(document).on('click', 'a[data-toggle=tab]', function () {
 
 });
 
-
-// $(document).ready(function() {
-
-
-  
-//   // Product page - Products menu
-//   // ======================================================================
-
-//   $(".products-navbar").click(function() {
-//     $( ".products-navbar-box" ).toggle();
-//   });
-//   $(".products-navbar").on("blur", function() {
-//     $( ".products-navbar-box" ).toggle();
-//   });
-
-// });
-
-// Home - Main menú animation
+// Products menu animation
 // ======================================================================
 
 $(document).ready(function(){
-    $(".main-menu .dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).stop( true, true );
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).stop( true, true );
-            $(this).toggleClass('open');       
-        }
-    );
+  $(".main-menu .dropdown").hover(
+    function() {
+      $('.dropdown-menu', this).stop( true, true );
+      $(this).toggleClass('open');
+    },
+    function() {
+      $('.dropdown-menu', this).stop( true, true );
+      $(this).toggleClass('open');
+    }
+  );
 });

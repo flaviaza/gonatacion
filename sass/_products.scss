@@ -16,7 +16,7 @@
 		color: $btn-color;
 		[class^="icon-"], [class*=" icon-"] {
 			font-size: 23px;
-			vertical-align: top;
+			//vertical-align: top;
 		}
 	}
 }
@@ -65,11 +65,13 @@
 		.btn {
 			&.btn-buy {
 				margin-left: 5px;
+				display: inline-block;
 			}
 		}
 		a {
 			vertical-align: middle;
-			padding: 19px 7px 0;
+			display: inline-block;
+			padding: 3px 7px 0;
 			span {
 				font-size: 32px;
 				color: #9c9c9c;
@@ -320,6 +322,7 @@
 				float: right;
 				color: $product-btn;
 				padding: 12px 11px;
+				height: 48px;
 			}
 		}
 	}

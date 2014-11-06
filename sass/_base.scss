@@ -7,6 +7,10 @@
   @include box-sizing(border-box);
 }
 
+h4, .h4 {
+  font-size: 24px;
+}
+
 a {
   color: $main;
   font-weight:300;
@@ -145,12 +149,12 @@ body{
     height: 100%;
     z-index: -1;
     content: '\00a0';
-    background-color: darken($main, 20%);
+    background-color: darken($main, 30%);
     @include opacity(.7);
   }
   &.large {
     &:before, &:after {
-      height: 235px;
+      height: 255px;
     }
   }
 }
@@ -203,7 +207,6 @@ footer{
 
 ul.products-column{
   list-style:none;
-  padding-left: 25px;
   max-width: 190px;
   li{
     padding:4px 0 6px;
@@ -218,8 +221,9 @@ ul.products-column{
       @include text-shadow(0 1px 2px $navigation-bg);
     }
     a {
-      color: darken($text-contrast, 10%);
+      color: darken($text-contrast, 30%);
       @include text-shadow(0 1px 2px $navigation-bg);
+      font-size: 17px;
       &:hover, &:focus {
         color: $text-contrast;
       }

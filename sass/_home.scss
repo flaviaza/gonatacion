@@ -23,7 +23,7 @@
   width: 100%;
   background-color: transparent;
   &.large {
-    height: 235px;
+    height: 255px;
     padding-top: 12px;
   }
   li {
@@ -160,7 +160,7 @@
     overflow: hidden;
     margin-top: 0;
     padding: 0;
-    height: 241px;
+    height: 240px;
     @media (max-width: 767px) {
       height: auto;
     }
@@ -168,10 +168,10 @@
 
     }
     @media (min-width: 992px) {
-      height: 314px;
+      height: 313px;
     }
     @media (min-width: 1200px) {
-      height: 381px;
+      height: 380px;
     }
     .picture-item__details {
       display: none;
@@ -225,7 +225,7 @@
   }
   .picture-item.picture-item--h2 {
 
-    height: 482px;
+    height: 480px;
     /* 2x the height + 1 gutter */
     @media (max-width: 767px) {
       height: auto;
@@ -234,10 +234,10 @@
 
     }
     @media (min-width: 992px) {
-      height: 628px;
+      height: 627px;
     }
     @media (min-width: 1200px) {
-      height: 764px;
+      height: 760px;
     }
 
   }
