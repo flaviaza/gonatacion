@@ -125,4 +125,6 @@
 .icon-remove:before {
 	content: "\e621";
 }
-
+.icon-more:before {
+	content: "\e622";
+}
