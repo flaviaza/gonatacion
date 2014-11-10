@@ -41,7 +41,7 @@ a {
   color: $favorite;
 }
 .buy {
-  color: $buy;
+  color: $btn-main;
 }
 
 input:focus{
@@ -67,9 +67,28 @@ textarea::-webkit-input-placeholder {
 }
 
 .btn-buy {
-  background-color: $buy;
-  border-color: $buy;
+  background-color: $btn-main;
+  border-color: $btn-main;
   border-radius:0;
+  text-transform: uppercase;
+}
+.btn-update {
+    background-color: $btn-bg-update;
+}
+.btn-remove {
+    background-color: $btn-bg-remove;
+}
+.btn-remove {
+    background-color: $btn-bg-remove;
+}
+.btn-collapse {
+    background-color: $btn-bg-collapse;
+}
+.btn-edit {
+  background-color: $btn-bg-edit;
+  padding: 8px 12px 6px;
+  font-size: 22px;
+  border-color: $btn-bg-edit;
 }
 
 body{
@@ -86,17 +105,13 @@ body{
 
   }
 }
-.products {
-  .container {
-    .navbar-brand {
-      width: 52;
-      height: 39;
-      margin-left: 0;
-      span {
-        text-indent: -9999px;
-        display: block;
-      }
-    }
+.navbar-brand {
+  width: 52;
+  height: 39;
+  margin-left: 0;
+  span {
+    text-indent: -9999px;
+    display: block;
   }
 }
 

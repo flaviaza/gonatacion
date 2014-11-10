@@ -2,7 +2,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         watch: {
             src: {
-                files: ['**/*.scss', '**/*.html'],
+                files: ['**/*.scss'],
                 tasks: ['compass:dev']
             },
         },
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             separator: ';'
           },
           dist: {
-            src: ['javascripts/bootstrap.js', 'javascripts/jquery.shuffle.modernizr.js', 'javascripts/jquery.shuffle.min.js', 'javascripts/jquery.elevateZoom-3.0.8.min.js', 'javascripts/Gallery.js', 'javascripts/marfed.js'],
+            src: ['javascripts/bootstrap.js', 'javascripts/jquery.shuffle.modernizr.js', 'javascripts/jquery.shuffle.min.js', 'javascripts/jquery.elevateZoom-3.0.8.min.js', 'javascripts/Gallery.js', 'javascripts/bootstrap-select.js', 'javascripts/marfed.js'],
             dest: 'javascripts/global.js'
           }
         },

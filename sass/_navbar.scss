@@ -5,6 +5,11 @@
 // Navbar styles
 // ======================================================================
 
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin: 0;
+}
+
 .navbar-fixed-top {
   position: absolute;
 }
@@ -98,18 +103,7 @@ ul {
       }
     }
     &.btn-logued {
-      background-color: $highlight;
-      color: $btn-color;
-      padding: 8px;
-      margin: 0 12px 0 8px;
       text-transform: capitalize;
-      &:hover, &:focus {
-        background-color: lighten($highlight, 10%);
-      }
-      span {
-        margin-left: 4px;
-        text-shadow: none;
-      }
     }
     &.nav-icon {
       margin-top: -4px;
@@ -165,7 +159,7 @@ ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
 	}
 }
 
-.dropdown-menu {
+.dropdown-toggle + ul {
 	padding: 15px 10px;
 	top: 49px;
 	width: 220px;
