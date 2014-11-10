@@ -104,6 +104,11 @@ ul {
     }
     &.btn-logued {
       text-transform: capitalize;
+      color: $text-contrast;
+      &:hover, &:focus {
+        background-color: lighten($highlight, 10%);
+        color: $btn-color;
+      }
     }
     &.nav-icon {
       margin-top: -4px;
