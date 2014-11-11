@@ -172,8 +172,7 @@ ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
 	box-shadow: none;
 	border: none;
   &> li {
-		border-top: 1px solid rgba(255, 255, 255, 0.27);
-		border-bottom: 1px solid rgba(0, 76, 160, 0.67);
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2) inset, 0px 1px 0px rgba(255, 255, 255, 0.05);
 		&>a {
 			font-weight: 100;
 			font-size: 17px;
