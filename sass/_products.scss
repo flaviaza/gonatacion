@@ -162,9 +162,10 @@
 		}
 	}
 	.input-group-btn {
-		width: 58%;
+		width: 60%;
 		&:last-child > .btn {
 			@include border-radius(4px);
+			margin-left: 4px;
 			&:not(:last-child):not(.dropdown-toggle) {
 				@include border-radius(4px);
 			}
