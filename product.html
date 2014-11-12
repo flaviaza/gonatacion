@@ -28,8 +28,8 @@
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">PRODUCTOS</a></li>
-          <li><a href="#">REGISTRARSE</a></li>
-          <li><a href="#" class="btn btn-login">INGRESAR<span class="icon-user"></span></a></li>
+          <li><a href="#" data-toggle="modal" data-target="#register-modal">REGISTRARSE</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-login">INGRESAR<span class="icon-user"></span></a></li>
           <li><a href="#">AYUDA</a></li>
         </ul>
       </nav>
@@ -165,6 +165,53 @@
       </div>
     </div>
 </footer>
+
+  <!-- Register Box Modal -->
+  <div class="modal modal-form" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="register-box">
+          <form id="register-form" action="index.html" method="post" role="form">
+            <input type="text" placeholder="Correo" class="large-input user-data">
+            <input type="password" placeholder="Contraseña" class="large-input password-data">
+            <input type="password" placeholder="Repita contraseña" class="large-input">
+            <div class="help-form">
+              <p><input type="checkbox" id="remember-me"> <label for="remember-me"> Recordarme</label></p>
+              <p>Se ha enviado un email. <a href="#forgot-password">Click aquí</a></p>
+            </div>
+            <input type="submit" value="ENVIAR" class="btn-success">
+            <button type="button" class="btn btn-lg btn-facebook">
+              <img src="images/facebook-logo.png" class="pull-left"/>
+              <span>Entrar con <b>Facebook</b><span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Box Modal -->
+  <div class="modal modal-form" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="login-box">
+          <form id="login-form" action="index.html" method="post" role="form">
+            <input type="text" placeholder="Usuario" class="large-input user-data">
+            <input type="password" placeholder="Contraseña" class="large-input">
+            <div class="help-form">
+              <p>¿Olvidó su contraseña? <a href="#forgot-password">Click aquí</a></p>
+              <p>¿Todavía no se registró? <a href="#new-register">Click aquí</a></p>
+            </div>
+            <input type="submit" value="ENVIAR" class="btn-success">
+            <button type="button" class="btn btn-lg btn-facebook">
+              <img src="images/facebook-logo.png" class="pull-left"/>
+              <span>Entrar con <b>Facebook</b><span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
