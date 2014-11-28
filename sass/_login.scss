@@ -1,0 +1,83 @@
+@import 'variables';
+
+
+// Login styles
+// ======================================================================
+
+.login-box, .contact-box, .register-box {
+	width: 480px;
+	.btn-success {
+	    background: #0bce0b url("../images/triangle.png") center top no-repeat;
+	    border: 0;
+	    font-weight: 300;
+	    float: right;
+	    height: 80px;
+	    width: 25%;
+	}
+	.help-form {
+	    background-color: #d7d7d7;
+	    display: inline-block;
+	    font-size: 12px;
+	    vertical-align: top;
+	    height: 80px;
+	    width: 75%;
+	    padding: 10px 15px;
+	    line-height: 1.46;
+		p {
+		    font-size: 12px;
+		    margin-bottom: 3px;
+		    a {
+			    color: #0095da;
+			    font-weight: bold;
+			}
+		}
+	}
+	input[type="text"], input[type="password"] {
+	    border: 0;
+	    font-size: 18px;
+	    height: 65px;
+	    padding: 16px;
+	}
+	textarea {
+	    padding: 10px 16px;
+	    border: none;
+	    outline: none;
+	    display: block;
+	}
+}
+.home {
+	.login-box, .contact-box, .register-box {
+	    position: absolute;
+	    top: 110px;
+	    right: 15px;
+	    z-index: 5;
+	}
+}
+.user-data, .password-data { 
+	margin-bottom: 25px; 
+}
+.login-box {
+	.help-form { 
+		padding-top: 20px;
+	}
+}
+
+.btn-facebook {
+    background: url("../images/btn-facebook.png") center left repeat-x;
+    color: #fafafa;
+    font-size: 16px;
+    font-weight: 100;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    line-height: 44px;
+    margin-top: 25px;
+    padding: 5px;
+    width: 100%;
+	&:hover { color: #fafafa }
+	&:active { background: url("../images/btn-facebook.png") center left repeat-x }
+}
+
+@media screen and (max-width: 767px) { 
+    .jumbotron { display: none }
+}

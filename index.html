@@ -5,78 +5,193 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="stylesheets/shuffle-styles.css" rel="stylesheet" type="text/css" />
-<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="stylesheets/mapfre-icon-font.css" title="icon font" type="text/css" />
 <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-<title>mapfred</title>
+<title>Marfed</title>
 
 </head>
 <body class="home">
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/mapfred.png" alt="mapfred" /><span class="btn btn-primary">Tienda Online</span></a>
+      <a class="navbar-brand" href="#">
+        <img src="images/mapfred.png" alt="mapfred" class="home" />
+        <span>Tienda Online</span>
+      </a>
     </div>
   </div>
-  <div class="collapse navbar-collapse">
+  <div class="navbar-collapse">
     <ul class="nav navbar-nav home-nav">
-      <li class="active"><a href="#about">¿Quiénes somos?</a></li>
-      <li><a href="#contact">Contacto</a></li>
-      <li><a href="#login">Ingresar</a></li>
-      <li><a href="#register">Registrarse</a></li>
+      <li><a href="#about" data-toggle="tab">¿Quiénes somos?</a></li>
+      <li><a href="#contact" class="contact" data-toggle="tab">Contacto</a></li>
+      <li><a href="#login" class="login" data-toggle="tab">Ingresar</a></li>
+      <li><a href="#register" class="register" data-toggle="tab">Registrarse</a></li>
     </ul>
+    <div class="container">
+      <div class="login-box hide">
+        <form id="login-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Usuario" class="large-input user-data">
+          <input type="password" placeholder="Contraseña" class="large-input">
+          <div class="help-form">
+            <p>¿Olvidó su contraseña? <a href="#forgot-password">Click aquí</a></p>
+            <p>¿Todavía no se registró? <a href="#new-register">Click aquí</a></p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn-success">
+          <button type="button" class="btn btn-lg btn-facebook">
+            <img src="images/facebook-logo.png" class="pull-left"/>
+            <span>Entrar con <b>Facebook</b><span>
+          </button>
+        </form>
+      </div><!--/.login-box -->
+
+      <div class="contact-box hide">
+        <form id="contact-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Nombre" class="large-input user-data">
+          <input type="text" placeholder="E-mail" class="large-input password-data">
+          <textarea name="Name" rows="8" cols="40" placeholder="Su consulta" class="large-input message"></textarea>
+          <div class="help-form">
+            <p>Paso de los Andes 384 Ciudad Mendoza CP(5500) Argentina</p>
+            <p>+54 (0261) 4297251 / 4253127 (línea directa)</p>
+            <p>info@gonatacion.com.ar</p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn-success">
+        </form>
+      </div><!--/.contact-box -->
+
+      <div class="register-box hide">
+        <form id="register-form" action="index.html" method="post" role="form">
+          <input type="text" placeholder="Correo" class="large-input user-data">
+          <input type="password" placeholder="Contraseña" class="large-input password-data">
+          <input type="password" placeholder="Repita contraseña" class="large-input">
+          <div class="help-form">
+            <p><input type="checkbox" id="remember-me"> <label for="remember-me"> Recordarme</label></p>
+            <p>Se ha enviado un email. <a href="#forgot-password">Click aquí</a></p>
+          </div>
+          <input type="submit" value="ENVIAR" class="btn-success">
+          <button type="button" class="btn btn-lg btn-facebook">
+            <img src="images/facebook-logo.png" class="pull-left"/>
+            <span>Entrar con <b>Facebook</b><span>
+          </button>
+        </form>
+      </div><!--/.register-box -->
+    </div>
   </div><!--/.nav-collapse -->
 </div>
 <div class="jumbotron">
-  <div class="submenu blured">
 
-    <ul class="container" id="purchase_flow">
-      <li>
-      <i class="icon-saletag"></i>
-      <span class="step-title">Elegí</span>
-      </li>
-      <li>
-      <i class="icon-addtobasket"></i>
-      <span class="step-title">Uno o más productos</span>
-      </li>
-      <li>
-      <i class="icon-creditcard"></i>
-      <span class="step-title">Pagá</span>
-      </li>
-      <li>
-      <i class="icon-parcel"></i>
-      <span class="step-title">Coordiná la entrega</span>
-      </li>
-      <li>
-      <i class="icon-deliverycar"></i>
-      <span class="step-title">Lo enviamos a tu casa</span>
-      </li>
-      <li>
-      <i class="icon-piggybank"></i>
-      <span class="step-title">Listo</span>
-      </li>
-    </ul>
-  </div>
-  <div class="main-menu">
-    <ul class="container nav navbar-nav">
-      <li><a href="#">Productos</a></li>
-      <li><a href="#">Nuestras Marcas</a></li>
-      <li><a href="#">Ofertas</a></li>
-      <li class="active"><a href="#">¿Cómo comprar?</a></li>
-      <li><a href="#">Soporte</a></li>
-    </ul>
+</div>
+
+<div class="main-menu">
+  <div class="container">
+    <div id="bs-megadropdown" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown mega-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="productos">Productos </a>
+          <div class="dropdown-menu mega-dropdown-menu submenu large blured productos-menu">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="row">
+                    <ul class="col-md-4 products-column">
+                      <li><h4>Natación</h4></li>
+                      <li><a href="#">Antiparras</a></li>
+                      <li><a href="#">Gorras</a></li>
+                      <li><a href="#">Set Máscara Snorkel</a></li>
+                      <li><a href="#">Accesorios</a></li>
+                      <li><a href="#">Aquashoes</a></li>
+                      <li><a href="#">Mallas</a></li>
+                    </ul>
+                    <ul class="col-md-4 products-column">
+                      <li><h4>Pelotas</h4></li>
+                      <li><a href="#">Fútbol Nº 5</a></li>
+                      <li><a href="#">Voleyball</a></li>
+                      <li><a href="#">Handball</a></li>
+                      <li><a href="#">Basket</a></li>
+                      <li><a href="#">Futsal</a></li>
+                      <li><a href="#">Inflador</a></li>
+                    </ul>
+                    <ul class="col-md-4 products-column">
+                      <li><h4>Otros</h4></li>
+                      <li><a href="#">Skate</a></li>
+                      <li><a href="#">Palos de Hockey</a></li>
+                      <li><a href="#">Bolsos (DryBags)</a></li>
+                      <li><a href="#">Bochas</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown mega-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="marcas">Marcas </a>
+          <div class="dropdown-menu mega-dropdown-menu submenu blured marcas-menu">
+            <ul class="container brands">
+              <li>
+                <span class="brand-marfed"></span>
+              </li>
+              <li>
+                <span class="brand-ben-10-alien"></span>
+              </li>
+              <li>
+                <span class="brand-ben-10"></span>
+              </li>
+              <li>
+                <span class="brand-disney"></span>
+              </li>
+              <li>
+                <span class="brand-hulk"></span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" id="ofertas">Ofertas</a>
+        </li>
+        <li class="dropdown mega-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="como-comprar">¿Cómo comprar? </a>
+          <div class="dropdown-menu mega-dropdown-menu submenu blured como-comprar-menu">
+            <ul class="container" id="purchase_flow">
+              <li>
+                <span class="icon-saletag"></span>
+                <span class="step-title">Elegí</span>
+              </li>
+              <li>
+                <span class="icon-addtobasket"></span>
+                <span class="step-title">Uno o más productos</span>
+              </li>
+              <li>
+                <span class="icon-creditcard"></span>
+                <span class="step-title">Pagá</span>
+              </li>
+              <li>
+                <span class="icon-parcel"></span>
+                <span class="step-title">Coordiná la entrega</span>
+              </li>
+              <li>
+                <span class="icon-deliverycar"></span>
+                <span class="step-title">Lo enviamos a tu casa</span>
+              </li>
+              <li>
+                <span class="icon-piggybank"></span>
+                <span class="step-title">Listo</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#" id="soporte">Soporte</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
+
 <div class="main-content">
   <header class="clearfix">
     <h2 class="container"><i class="icon-newbadge"></i> Productos destacados<span class="search clearfix col-md-4 col-sm-4 pull-right">
@@ -87,110 +202,105 @@
   </header>
   <div class="container">
 
-
     <div id="grid" class="row">
       <figure class="col-md-4 col-sm-4 picture-item" data-groups='["photography"]'>
         <img src="images/roller.jpg"/>
         <div class="picture-item__details clearfix">
-          <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
+          <figcaption class="picture-item__title pull-left"><a href="product.html" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
-      <figure class="col-md-8 col-sm-8 picture-item" data-groups='["wallpaper","3d"]'>
+      <figure class="col-md-8 col-sm-8 picture-item" data-groups='["photography"]'>
         <img src="images/slip.jpg"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
-      <figure class="col-md-8 col-sm-8 picture-item" data-groups='["wallpaper","3d"]'>
+      <figure class="col-md-8 col-sm-8 picture-item" data-groups='["photography"]'>
         <img src="images/lentes-fuego.jpg"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
-      <figure class="col-md-4 col-sm-4 picture-item picture-item--h2" data-groups='["graphics"]'>
-        <img src="images/maya.jpg"/>
+      <figure class="col-md-4 col-sm-4 picture-item picture-item--h2" data-groups='["photography"]'>
+        <img src="images/malla.jpg"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
-      <figure class="col-md-4 col-sm-4 picture-item picture-item" data-groups='["graphics"]'>
+      <figure class="col-md-4 col-sm-4 picture-item picture-item" data-groups='["photography"]'>
         <img src="images/lentes-azul.jpg"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
-      <figure class="col-md-4 col-sm-4 picture-item picture-item" data-groups='["graphics"]'>
+      <figure class="col-md-4 col-sm-4 picture-item picture-item" data-groups='["photography"]'>
         <img src="images/bikini.jpg"/>
         <div class="picture-item__details clearfix">
           <figcaption class="picture-item__title pull-left"><a href="#" target="_blank"><i class="icon-plus-sign"></i><span>Nombre y descripcion del producto</span></a></figcaption>
         </div>
       </figure>
     </div>
-
-
-
-
-
-
   </div>
+
 </div>
+
+
 <footer id="footer">
   <div class="container">
-    <a class="btn collapsed" data-toggle="collapse" data-parent="#footer" href="#footerContent" >Ver más</a>
-    <div class="row collapse" id="footerContent">
-      <div class="col-md-8">
-        <h3>Productos</h3>
+    <div id="footerContent">
+      <div class="col-md-6">
+        <h3>PRODUCTOS</h3>
         <div class="row">
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-column">
             <li><h4>Natación</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Antiparras</a></li>
+            <li><a href="#">Gorras</a></li>
+            <li><a href="#">Set Máscara Snorkel</a></li>
+            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">Aquashoes</a></li>
+            <li><a href="#">Mallas</a></li>
           </ul>
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-column">
             <li><h4>Pelotas</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Fútbol Nº 5</a></li>
+            <li><a href="#">Voleyball</a></li>
+            <li><a href="#">Handball</a></li>
+            <li><a href="#">Basket</a></li>
+            <li><a href="#">Futsal</a></li>
+            <li><a href="#">Inflador</a></li>
           </ul>
-          <ul class="col-md-3">
+          <ul class="col-md-4 products-column">
             <li><h4>Otros</h4></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+            <li><a href="#">Skate</a></li>
+            <li><a href="#">Palos de Hockey</a></li>
+            <li><a href="#">Bolsos (DryBags)</a></li>
+            <li><a href="#">Bochas</a></li>
           </ul>
         </div>
       </div>
-      <div class="col-md-2">
-        <h3>Nuestras Marcas</h3>
+      <div class="col-md-3">
+        <h3>NUESTRAS MARCAS</h3>
         <div class="row">
-          <ul>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Productos</a></li>
+          <ul class="col-md-12 products-column">
+            <li><a href="#">Marfed</a></li>
+            <li><a href="#">Ben 10</a></li>
+            <li><a href="#">Ben 10 Alien Force</a></li>
+            <li><a href="#">Princesa</a></li>
+            <li><a href="#">Wave</a></li>
+            <li><a href="#">Stop</a></li>
           </ul>
         </div>
+      </div>
+      <div class="col-md-3 logo">
+        <img src="images/logo-footer.png" alt="Mapfred" class="pull-right"/>
       </div>
     </div>
-  </footer>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="javascripts/bootstrap.js"></script>
-<script src="javascripts/jquery.shuffle.modernizr.js"></script>
-<script src="javascripts/jquery.shuffle.min.js"></script><!-- http://vestride.github.io/Shuffle/ -->
-<script src="javascripts/marfed.js"></script>
-</body>
+</footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="javascripts/global.min.js"></script>
+
+  </body>
 </html>
