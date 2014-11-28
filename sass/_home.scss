@@ -1,0 +1,365 @@
+@import 'compass/css3/filter';
+@import 'compass/css3/opacity';
+@import 'compass/css3/text-shadow';
+@import 'compass/css3/opacity';
+@import 'compass/css3/border-radius';
+@import 'variables';
+
+.jumbotron {
+  position: relative;
+  margin: 0;
+  padding: 50% 0 0 0;
+  background: transparent none;
+  .container {
+    margin: 0 auto;
+  }
+}
+.submenu {
+  height: 180px;
+  color: $main;
+  position: absolute;
+  bottom: 110px;
+  margin: 0px auto;
+  width: 100%;
+  background-color: transparent;
+  &.large {
+    height: 255px;
+    padding-top: 12px;
+  }
+  li {
+    position: relative;
+  }
+  ul#purchase_flow {
+    padding: 0;
+    counter-reset: step;
+    li {
+      width: 16.3%;
+      display: inline-block;
+      height: 180px;
+      padding: 15px 25px 0;
+      list-style: none;
+      text-align: center;
+      vertical-align: top;
+      [class*='icon']{
+        display: block;
+        color: darken($main, 15%);
+        font-size: 64px;
+        @include text-shadow(0 3px 5px darken($main, 38%));
+        margin: 15px 0 10px 0;
+      }
+      .step-title{
+        color: $blured-menu-text;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: normal;
+      }
+      &:before {
+        display: block;
+        counter-increment: step;
+        content: counter(step);
+        font-size: 24px;
+        float: left;
+      }
+      &:after{
+        display: block;
+        position: absolute;
+        content: '\00a0';
+        background: transparent url('../images/purchase-flow-arrow.png') center center no-repeat;
+        width: 32px;
+        height: 180px;
+        top: 0;
+        right: -16px;
+      }
+      &:last-child:after{
+        display: none;
+      }
+    }
+  }
+  ul.brands {
+    li {
+      width: 19.7%;
+      display: inline-block;
+      height: 179px;
+      padding: 15px 2px 0px;
+      list-style: none;
+      border-right: 1px solid #00213d;
+      text-align: center;
+      &:last-child {
+        border-right: none;
+        &:after{
+          display: none;
+        }
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        background: rgba(255, 255, 255, 0.1);
+        width: 1px;
+        height: 180px;
+        top: 0;
+        right: 0px;
+      }
+    }
+  }
+}
+
+.main-menu{
+  background: $navigation-bg none;
+  position: relative;
+  z-index: 10;
+  .nav{
+    float: none;
+    overflow: visible;
+    height: 113px;
+    white-space: nowrap;
+    &> li {
+      margin-right: 2.04em;
+      float: none;
+      display: inline-block;
+      &:last-child {
+        margin-right: 0;
+      }
+      &> a{
+        padding: 35px 27px;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #7f7f7f;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+      }
+      &> a:hover,
+      &> a:focus{
+        background-color: $main;
+        color: $text-main;
+        border-top: 10px solid black;
+        border-bottom: 10px solid black;
+      }
+    }
+  }
+}
+.home {
+  .main-content {
+    padding-bottom: 90px;
+    header {
+      background: $bg-heading;
+      .container {
+        margin: 0 auto;
+        padding: 0 15px;
+        line-height: 60px;
+        color: $main;
+        text-transform: uppercase;
+        @include text-shadow(0 3px 5px $text-contrast);
+        font-size: 22px;
+      }
+    }
+  }
+  .submenu {
+    top: auto;
+  }
+}
+.home #grid{
+  max-width: 1770px;
+  margin: 0 auto;
+  .picture-item{
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+    height: 240px;
+    @media (max-width: 767px) {
+      height: auto;
+    }
+    @media (max-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+      height: 313px;
+    }
+    @media (min-width: 1200px) {
+      height: 380px;
+    }
+    .picture-item__details {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: $highlight;
+      @include opacity(0.9);
+      .picture-item__title a {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        span {
+          display: block;
+          position: absolute;
+          left: 10px;
+          bottom: 10px;
+          color: $text-contrast;
+          font-size: 17px;
+          font-weight: 300;
+          max-width: 85%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .icon-plus-sign {
+          display: block;
+          position: absolute;
+          font-size: 76px;
+          line-height: 76px;
+          width: 76px;
+          height: 76px;
+          left: 50%;
+          top: 50%;
+          margin: -38px 0 0 -38px;
+          @include text-shadow(0 3px 5px lighten($navigation-bg, 38%));
+          color: $main;
+        }
+      }
+    }
+    &:hover {
+      .picture-item__details {
+        display: block;
+      }
+    }
+  }
+  .picture-item.picture-item--h2 {
+
+    height: 480px;
+    /* 2x the height + 1 gutter */
+    @media (max-width: 767px) {
+      height: auto;
+    }
+    @media (max-width: 768px) {
+
+    }
+    @media (min-width: 992px) {
+      height: 627px;
+    }
+    @media (min-width: 1200px) {
+      height: 760px;
+    }
+
+  }
+}
+.home-nav {
+  &> li{
+    &> a{
+      padding: 35px 27px;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #7f7f7f;
+    }
+    &> a:hover,
+    &> a:focus{
+      background-color: $main;
+      color: $text-main;
+      // border-top-color: $active;
+    }
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .home-nav > li > a, ul.products-column li a {
+    font-weight: 400;
+  }
+}
+
+[class^="brand-"], [class*=" brand-"] {
+  display: inline-block;
+  width: 150px;
+  height: 145px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url("../images/sprite-brands.png");
+  background-repeat: no-repeat;
+  list-style-type: none
+}
+
+.brand-marfed        { background-position: 0 0; }
+.brand-ben-10-alien  { background-position: -150px 0; width: 116px; }
+.brand-ben-10        { background-position: -268px 0; width: 127px;}
+.brand-disney        { background-position: -396px 0; width: 182px; }
+.brand-hulk          { background-position: -576px 0; }
+.brand-mercadopago   { background-position: -60px -164px; width: 90px; height: 26px; }
+.brand-visa          { background-position: -156px -165px; width: 36px; height: 23px; }
+.brand-mastercard    { background-position: -194px -166px; width: 30px; height: 23px; }
+.brand-american      { background-position: -226px -166px; width: 26px; height: 23px; }
+.brand-inner-marfed  { background-position: 0 -152px; width: 53px; height: 39px; }
+.brand-visa, .brand-mastercard, .brand-american, .brand-mercadopago {
+  text-indent: -9999px;
+  display: inline-block;
+}
+
+.search {
+  padding-right: 0;
+  display: inline-block;
+  input, button {
+    display: block;
+    float: left;
+    margin: 0;
+    border: 0px solid transparent;
+  }
+  input{
+    width: 80%;
+    color: darken($blured-menu-text, 40%);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  button {
+    width: 20%;
+    height: 62px;
+    @include border-radius(0);
+    font-size: 22px;
+    color: $text-contrast;
+    background: $success;
+    position: relative;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '\00a0';
+      width: 0;
+      height: 0;
+      border: 8px solid $success;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      left: -16px;
+      top: 24px;
+    }
+  }
+}
+
+.nav-tabs {
+  border: none;
+  > li {
+    > a {
+      border: none;
+      margin-right: 1px;
+      border-radius: 0;
+      background-color: transparent;
+
+    }
+    &.active > a {
+      background-color: transparent;
+            color: white;
+      &,
+      &:hover,
+      &:focus {
+        border: none;
+        border-width: 0;
+        background-color: transparent;
+        // color: $nav-tabs-active-link-hover-color;
+        // background-color: $nav-tabs-active-link-hover-bg;
+        // border: 1px solid $nav-tabs-active-link-hover-border-color;
+        // border-bottom-color: transparent;
+        // cursor: default;
+      }
+    }
+  }
+}

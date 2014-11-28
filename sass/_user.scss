@@ -1,0 +1,145 @@
+@import 'compass/css3/filter';
+@import 'compass/css3/opacity';
+@import 'compass/css3/text-shadow';
+@import 'compass/css3/opacity';
+@import 'compass/css3/border-radius';
+@import 'variables';
+
+.btn-logued {
+  background-color: $highlight;
+  color: $btn-color;
+  padding: 8px;
+  text-transform: capitalize;
+  &:hover, &:focus {
+    background-color: lighten($highlight, 10%);
+    color: $btn-color;
+  }
+  span {
+    margin-left: 4px;
+    text-shadow: none;
+  }
+}
+
+.place > div {
+  display: inline;
+}
+
+.user .main-content {
+  font-size: 22px;
+  font-weight: 100;
+  padding-top: 20px;
+  .row {
+    margin-bottom: 20px;
+    .row {
+      margin-bottom: 10px;
+    }
+  }
+  label {
+    font-weight: 100;
+  }
+  legend {
+    background: $table-bg-color;
+    border: medium none;
+    padding: 20px 12px 25px;
+    font-size: 22px;
+    span {
+      font-size: 29px;
+      vertical-align: sub;
+      margin-left: 2px;
+    }
+  }
+  .main-data {
+    margin-bottom: 10px;
+    fieldset {
+      position: relative;
+      width: 100%;
+      &> .btn-logued, &> span {
+        display: inline;
+        margin-right: 30px;
+        vertical-align: middle;
+      }
+      .btn-logued {
+        font-size: 17px;
+      }
+    }
+  }
+  strong {
+    font-weight: 400;
+  }
+  input {
+    margin-left: 5px;
+  }
+  input, .bootstrap-select button {
+    padding: 11px;
+    font-weight: 400;
+    border: none;
+    @include box-shadow(rgba(black, 0.15) -2px 2px 3px, rgba(150, 150, 150, 0.05) 0 0 12px 1px inset);
+    @include border-radius(4px);
+    font-size: 22px;
+  }
+  .short {
+    width: 100px;
+  }
+  .large {
+    width: 350px;
+    .select-picker {
+      width: 350px;
+    }
+  }
+  .invoice {
+    position: relative;
+    margin: 10px 0;
+    padding: 0 10px;
+    p {
+      margin: 0 0 15px;
+    }
+  }
+  .btn-edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .btn.btn-buy {
+    padding: 10px 11px 11px;
+    margin-left: 3px;
+  }
+}
+.bootstrap-select {
+  .dropdown-menu {
+    min-width: auto;
+    border: none;
+    top: 47px;
+    @include box-shadow(rgba(black, 0.15) -2px 2px 3px);
+    &> li > a {
+      font-size: 22px;
+      padding: 6px 15px 8px;
+    }
+    &.open {
+      background: transparent;
+      box-shadow: none;
+    }
+    .check-mark {
+      display: none;
+    }
+  }
+  &> .btn {
+    background-color: $table-bg-color;
+  }
+  &.btn-group .dropdown-menu.inner {
+    @include border-radius(4px);
+  }
+}
+#provincia + .bootstrap-select {
+  width: 200px;
+  margin-right: 20px;
+  button {
+    width: 200px;
+  }
+}
+#ciudad + .bootstrap-select {
+  width: 325px;
+  margin-right: 20px;
+  button {
+    width: 325px;
+  }
+}

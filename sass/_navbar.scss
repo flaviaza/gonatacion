@@ -1,0 +1,207 @@
+@import 'variables';
+@import 'compass/css3/text-shadow';
+
+
+// Navbar styles
+// ======================================================================
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin: 0;
+}
+
+.navbar-fixed-top {
+  position: absolute;
+}
+.navbar-brand{
+  width: 261px;
+  img {
+    display: block;
+    .home {
+      width: 200px;
+    }
+  }
+  span {
+    text-align: center;
+    color: $text-contrast;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    padding-top: 10px;
+    @include text-shadow(0 1px 2px $navigation-bg);
+  }
+}
+.navbar-inverse {
+  z-index: 5;
+  .container{
+    height: 0;
+  }
+  background: transparent none;
+  border-color: transparent;
+  .navbar-collapse{
+    border-color: transparent;
+    .container {
+      position: relative;
+    }
+  }
+  .navbar-nav{
+    float: right;
+
+    &> li > a{
+      font-size: 15px;
+      padding: 24px 30px;
+      color: $grey;
+      background-color: transparent;
+    }
+    &> li > a:hover,
+    &> .active > a,
+    &> .active > a:hover,
+    &> .active > a:focus{
+      color: $text-main;
+      text-shadow: none;
+      background-color: $main;
+    }
+  }
+}
+
+ul {
+  &> .active > a,
+  &> .active > a:hover,
+  &> .active > a:focus{
+    background-color: transparent;
+    color: $text-main;
+    border-top-color: $active;
+    //@include text-shadow(0 1px 4px lighten($main,10%));
+  }
+}
+
+.inner-page-nav{
+  background-color:black;
+  border-bottom:2px solid $main;
+  margin-bottom:0;
+  padding:10px 0;
+  .navbar-brand {
+    width: 53px;
+  }
+  .navbar-nav > li > a {
+    margin-right: 4px;
+    padding: 9px;
+    font-size: 17px;
+    color: $blured-menu-text;
+    text-transform: uppercase;
+    &.btn-login {
+      background-color: $btn-bg-login;
+      color: $btn-color-login;
+      @include border-radius(3px);
+      @include text-shadow(0 1px 4px lighten($main,10%));
+      &:hover, &:focus {
+        background-color: lighten($btn-bg-login, 10%);
+      }
+      span {
+        font-size:16px;
+        margin-left:4px;
+      }
+    }
+    &.btn-logued {
+      text-transform: capitalize;
+      color: $text-contrast;
+      &:hover, &:focus {
+        background-color: lighten($highlight, 10%);
+        color: $btn-color;
+      }
+    }
+    &.nav-icon {
+      margin-top: -4px;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $text-contrast;
+    }
+  }
+  .submenu {
+    bottom:250px;
+  }
+  .navbar-brand{
+    height:auto;
+    padding:0;
+  }
+  .mega-dropdown-menu {
+    top: 59px;
+  }
+  .nav {
+    .open {
+      &> a, &> a:hover, &> a:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+ul > .active > a, ul > .active > a:hover, ul > .active > a:focus {
+	&.products-navbar {
+		color: $bg;
+		background-color: transparent;
+	}
+}
+
+.nav {
+	height: 39px;
+	&> li {
+	    &> a {
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				outline-color: $text-contrast;
+			}
+		}
+	}
+	.open {
+		&> a, &> a:hover, &> a:focus {
+			border-color: transparent;
+      background-color: transparent;
+		}
+	}
+}
+
+.dropdown-toggle + ul {
+	padding: 15px 10px;
+	top: 49px;
+	width: 220px;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+  &> li {
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2) inset, 0px 1px 0px rgba(255, 255, 255, 0.05);
+		&>a {
+			font-weight: 100;
+			font-size: 17px;
+			padding: 3px 13px 5px;
+			@include text-shadow(0 1px 2px $navigation-bg);
+      color: darken($text-contrast, 10%);
+			&:hover, &:focus {
+				color: $text-contrast;
+				background-color: transparent;
+			}
+		}
+		&:last-child {
+			border-bottom-width: 0;
+		}
+		&:first-child {
+			border-top-width: 0;
+		}
+	}
+}
+
+.navbar-right {
+  .dropdown-user {
+  	left: -44px;
+    background-color: transparent;
+  }
+}
+
+.mega-dropdown { position: static !important; }
+.mega-dropdown-menu {
+  padding: 0;
+  width: 100%;
+}

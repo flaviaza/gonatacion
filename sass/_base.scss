@@ -1,0 +1,254 @@
+@import 'variables';
+@import 'compass/css3/box-sizing';
+@import 'compass/css3/border-radius';
+@import 'compass/css3/text-shadow';
+
+* {
+  @include box-sizing(border-box);
+}
+
+h4, .h4 {
+  font-size: 24px;
+}
+
+a {
+  color: $main;
+  font-weight:300;
+  &:hover {
+    color: darken($main, 10%);
+    text-decoration:none;
+  }
+}
+
+.btn {
+  &:focus, &:active{
+    outline: none;
+    outline-offset: 0;
+  }
+
+  &:active {
+    box-shadow:none;
+    -webkit-box-shadow:none;
+  }
+}
+.big-icon {
+  font-size: 28px;
+}
+.highlight {
+  color: $highlight;
+}
+.favorite {
+  color: $favorite;
+}
+.buy {
+  color: $btn-main;
+}
+
+input:focus{
+  outline: none;
+  outline-offset: 0;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $placeholder;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $placeholder;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $placeholder;
+}
+
+.btn {
+  font-weight: 300;
+}
+
+.btn-buy {
+  background-color: $btn-main;
+  border-color: $btn-main;
+  border-radius:0;
+  text-transform: uppercase;
+}
+.btn-update {
+    background-color: $btn-bg-update;
+}
+.btn-remove {
+    background-color: $btn-bg-remove;
+}
+.btn-remove {
+    background-color: $btn-bg-remove;
+}
+.btn-collapse {
+    background-color: $btn-bg-collapse;
+}
+.btn-edit {
+  background-color: $btn-bg-edit;
+  padding: 8px 12px 6px;
+  font-size: 22px;
+  border-color: $btn-bg-edit;
+}
+
+body{
+  font-family: 'Lato', Arial, sans-serif;
+  line-height: 1.31;
+  background: $bg;
+  &.home{
+    width: 100%;
+    background: $bg url('../images/meolans.jpg') center top no-repeat;
+    background-size: 100% auto;
+    position:relative;
+  }
+  &.products{
+
+  }
+}
+.navbar-brand {
+  width: 52;
+  height: 39;
+  margin-left: 0;
+  span {
+    text-indent: -9999px;
+    display: block;
+  }
+}
+
+.search-nav{
+  background-color: $light-grey;
+  border:0;
+  @include border-radius(0);
+  margin-bottom:0;
+  .navbar-form{
+    input{
+      @include border-radius(4px 0 0 4px);
+      border:0;
+      box-shadow:none;
+    }
+    .btn{
+      @include border-radius(0 4px 4px 0);
+      border:1px solid $success;
+      background-color: $success;
+      color:$bg;
+      @include text-shadow(rgba(black, 0.2) 1px 2px 4px);
+      font-size:20px;
+      padding:2px 6px;
+    }
+  }
+  .product-title{
+    line-height:51px;
+    margin:0;
+    font-weight: 300;
+    @include text-shadow(0 1px 0 $bg);
+  }
+}
+.blured{
+  background-color: none;
+  &:after{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    content: '\00a0';
+  }
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    content: '\00a0';
+    background-color: darken($main, 30%);
+    @include opacity(.7);
+  }
+  &.large {
+    &:before, &:after {
+      height: 255px;
+    }
+  }
+}
+
+.user-menu{
+  display: block;
+  margin: 0;
+  padding: 0;
+  li{
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+.main-content{
+  background: $bg none;
+  padding: 1px 0 70px;
+}
+
+.jumbotron{
+  position:relative;
+}
+
+.large-input{
+  width:100%;
+}
+
+footer{
+  width: 100%;
+  background: transparentize($navigation-bg, .1);
+  height:60px;
+  bottom:0;
+  overflow:hidden;
+  position:fixed;
+  transition: all 0.5s ease;
+  z-index: 10;
+  &:hover{
+    height:280px;
+    bottom:0;
+    overflow:visible;
+    transition: all 0.5s ease;
+  }
+  h3{
+    color: $highlight;
+  }
+  .logo {
+    margin-top: 5px;
+  }
+}
+
+ul.products-column{
+  list-style:none;
+  max-width: 190px;
+  li{
+    padding:4px 0 6px;
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, .20) inset, 0 1px 0 rgba(255, 255, 255, .05);
+    &:last-child{
+      box-shadow: none;
+    }
+    h4{
+      color:$blue;
+      margin:0;
+      font-weight: 300;
+      @include text-shadow(0 1px 2px $navigation-bg);
+    }
+    a {
+      color: darken($text-contrast, 30%);
+      @include text-shadow(0 1px 2px $navigation-bg);
+      font-size: 17px;
+      &:hover, &:focus {
+        color: $text-contrast;
+      }
+    }
+  }
+}
+
+.transparent-bg {
+  background-color: rgba(59, 136, 190, 0.9);
+}
+.dropdown-menu {
+  border: none;
+}
