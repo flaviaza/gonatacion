@@ -87,7 +87,6 @@
 	padding: 5px 18px;
 	width: 95%;
 	border-radius: 3px;
-	
 }
 
 .text-description {
@@ -233,7 +232,7 @@
 					max-width: 65px;
 					float: left;
 					margin-right: 15px;
-				}	
+				}
 				a {
 					font-size: 18px;
 					font-weight: bold;
@@ -308,7 +307,8 @@
 
 	.product {
 		width: 25%;
-		display: inline-block;
+		display: block;
+    float: left;
 		vertical-align: top;
 		padding: 2px;
 		border-left: 1px dashed $main;
